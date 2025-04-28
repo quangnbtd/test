@@ -3,406 +3,687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kế Hoạch Du Lịch Hà Nội 30/4 - 1/5/2025</title>
+    <title>Kế Hoạch Du Lịch Hà Nội 30/4 - 1/5/2025 (Hiện đại)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- === EMBEDDED CUSTOM CSS START === -->
+    <!-- === EMBEDDED CUSTOM CSS - MODERN STYLE === -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap');
+        :root {
+            /* --- Color Palette --- */
+            --primary-color: #4a90e2; /* Xanh dương chính */
+            --secondary-color: #f5a623; /* Vàng cam nhấn */
+            --light-bg: #f9fbfd; /* Nền sáng rất nhạt */
+            --white-color: #ffffff;
+            --dark-color: #333a45; /* Xám đậm cho chữ */
+            --grey-color: #6c757d; /* Xám cho chữ phụ */
+            --border-color: #e9ecef; /* Màu viền nhạt */
+
+            /* --- Typography --- */
+            --body-font: 'Poppins', sans-serif;
+            --base-font-size: 16px;
+            --line-height-base: 1.7;
+
+            /* --- Spacing --- */
+            --section-padding: 5rem 0; /* Padding lớn hơn cho section */
+
+            /* --- Effects --- */
+            --box-shadow-light: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --box-shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --border-radius-base: 12px; /* Bo góc lớn hơn */
+            --transition-base: all 0.3s ease-in-out;
+        }
 
         body {
-            font-family: 'Be Vietnam Pro', sans-serif;
-            padding-top: 56px; /* Height of fixed navbar */
-            scroll-behavior: smooth; /* Cho phép cuộn mượt khi nhấn link navbar */
+            font-family: var(--body-font);
+            font-size: var(--base-font-size);
+            color: var(--dark-color);
+            background-color: var(--white-color);
+            line-height: var(--line-height-base);
+            padding-top: 70px; /* Điều chỉnh theo chiều cao navbar */
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            color: var(--dark-color);
+            line-height: 1.3;
+        }
+
+        h2 { font-size: 2.2rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.15rem; }
+
+        p {
+            color: var(--grey-color);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition-base);
+        }
+        a:hover {
+            color: darken(var(--primary-color), 10%);
+            text-decoration: none;
         }
 
         /* Navbar */
         .navbar {
-            background-color: rgba(0, 0, 0, 0.85); /* Tăng độ đậm một chút */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Thêm shadow nhẹ */
-            transition: background-color 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95); /* Nền trắng mờ */
+            backdrop-filter: blur(10px); /* Hiệu ứng blur */
+            box-shadow: var(--box-shadow-light);
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            transition: var(--transition-base);
+            height: 70px; /* Chiều cao cố định */
         }
-
         .navbar-brand {
             font-weight: 700;
-            letter-spacing: 1px;
+            color: var(--dark-color) !important;
+            font-size: 1.3rem;
         }
         .navbar-brand i {
+            color: var(--primary-color);
             margin-right: 8px;
         }
-
         .nav-link {
-            transition: color 0.3s ease;
-            padding-left: 0.8rem;
-            padding-right: 0.8rem;
+            color: var(--grey-color) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.2rem;
+            border-radius: var(--border-radius-base);
+            transition: var(--transition-base);
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+            background-color: rgba(74, 144, 226, 0.1); /* Nền xanh nhạt khi hover/active */
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        .navbar-toggler-icon {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51, 58, 69, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
 
-        .nav-link:hover, .nav-link.active { /* Thêm lớp active cho link hiện tại */
-            color: #0dcaf0 !important; /* Bootstrap info color */
-        }
 
         /* Hero Section */
         .hero-section {
-            height: 60vh;
-            min-height: 400px; /* Đảm bảo chiều cao tối thiểu */
-            /* !!! Quan trọng: Thay đổi URL ảnh nền nếu cần */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1589949080001-3849e416c0a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            height: 70vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1558005530-a7958896ec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxoYW5vaXxlbnwwfHx8fDE2ODI4MzcyNzc&ixlib=rb-4.0.3&q=80&w=1600') no-repeat center center; /* Ảnh khác */
             background-size: cover;
-            position: relative;
-            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white-color);
         }
         .hero-section h1 {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--white-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Section Title */
         .section-title {
             font-weight: 700;
-            color: #343a40; /* Dark gray */
             position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 2.5rem; /* Tăng khoảng cách dưới */
+            padding-bottom: 1.5rem; /* Tăng padding */
+            margin-bottom: 4rem; /* Tăng khoảng cách */
         }
-
         .section-title i {
-            margin-right: 10px;
+            color: var(--primary-color);
+            margin-right: 12px;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
             display: block;
-            width: 60px;
-            height: 4px; /* Tăng độ dày gạch */
-            background: #0d6efd; /* Bootstrap primary color */
+            width: 80px; /* Dài hơn */
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Gradient */
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: 2px; /* Bo tròn nhẹ */
+            border-radius: 2px;
         }
 
         /* Section Background */
         .section-bg {
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: var(--light-bg);
         }
+        section {
+             padding: var(--section-padding);
+        }
+
 
         /* Info Card */
         .info-card {
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Shadow nhẹ nhàng hơn */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 8px; /* Bo góc card */
+            background-color: var(--white-color);
+            border: 1px solid var(--border-color); /* Viền rất nhạt */
+            box-shadow: var(--box-shadow-light);
+            transition: var(--transition-base);
+            border-radius: var(--border-radius-base);
+            overflow: hidden; /* Đảm bảo bo góc đúng */
+            height: 100%;
         }
         .info-card:hover {
-            transform: translateY(-8px); /* Hiệu ứng nhấc lên rõ hơn */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-medium);
         }
         .icon-circle {
-            width: 65px; /* Tăng kích thước icon */
-            height: 65px;
-            background: linear-gradient(135deg, #0d6efd, #0dcaf0); /* Gradient background */
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), lighten(var(--primary-color), 15%));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: -35px auto 15px auto; /* Đẩy icon lên trên 1 chút */
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+            margin: -35px auto 20px auto; /* Đẩy lên cao hơn */
+            color: var(--white-color);
+            box-shadow: 0 6px 15px rgba(74, 144, 226, 0.3);
+        }
+        .info-card .card-body {
+            padding: 2rem; /* Tăng padding */
         }
         .info-card .card-title {
-            margin-top: 1rem;
+            margin-top: 0; /* Bỏ margin top */
             font-weight: 600;
+            margin-bottom: 1rem;
         }
-        .info-card ul li i { /* Style cho icon trong list */
-           width: 20px; /* Căn chỉnh vị trí */
+        .info-card ul {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+        .info-card ul li {
+            margin-bottom: 0.5rem;
+            color: var(--grey-color);
+        }
+        .info-card ul li i {
+           width: 25px;
            text-align: center;
+           margin-right: 8px;
+           color: var(--primary-color);
         }
         .info-card .progress {
-            height: 12px;
-            border-radius: 6px;
+            height: 8px; /* Thanh mảnh hơn */
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #e9ecef;
         }
-
+        .info-card .progress-bar {
+             background-color: var(--primary-color);
+        }
+         .info-card .progress-bar.bg-info { background-color: #56ccf2; } /* Màu khác cho tiền mặt */
+         .info-card .progress-bar.bg-danger { background-color: var(--secondary-color); } /* Màu nhấn cho thẻ */
 
         /* Personnel Card */
         .personnel-card {
-            border: 1px solid #e0e0e0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 8px;
+            background-color: var(--white-color);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--box-shadow-light);
+            transition: var(--transition-base);
+            border-radius: var(--border-radius-base);
+            text-align: center;
+            padding: 2rem 1.5rem;
         }
         .personnel-card:hover {
-             transform: scale(1.03) translateY(-5px);
-             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+             transform: translateY(-8px) scale(1.02);
+             box-shadow: var(--box-shadow-medium);
+             border-color: var(--primary-color);
         }
         .personnel-card i.fa-3x {
-            margin-bottom: 1rem !important;
-            /* Màu sắc icon theo vai trò có thể thêm ở đây nếu muốn */
+            font-size: 2.8rem; /* Điều chỉnh size */
+            margin-bottom: 1.5rem !important;
+            display: inline-block;
+            /* Gradient color for icons */
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .personnel-card .card-title {
              font-weight: 600;
+             margin-bottom: 0.5rem;
+        }
+        .personnel-card p {
+             font-size: 0.9rem;
+             color: var(--grey-color);
         }
 
         /* Timeline Section */
         .timeline-section {
             position: relative;
-            overflow-x: hidden; /* Tránh thanh cuộn ngang do hiệu ứng AOS */
+            overflow-x: hidden;
         }
-
         .timeline {
             position: relative;
-            padding: 30px 0;
+            padding: 40px 0;
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
-
-        .timeline::before {
+        .timeline::before { /* Đường line chính */
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 4px;
-            background: #e9ecef; /* Light gray */
+            width: 3px; /* Mảnh hơn */
+            background: var(--border-color);
             left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
+            margin-left: -1.5px;
+            border-radius: 1.5px;
         }
-
         .timeline-item {
-            margin-bottom: 40px;
+            margin-bottom: 50px; /* Tăng khoảng cách */
             position: relative;
         }
-
         .timeline-item::after {
-            content: "";
-            display: table;
-            clear: both;
+            content: ""; display: table; clear: both;
         }
-
-        /* Icon position */
-        .timeline-icon {
+        .timeline-icon { /* Điểm mốc */
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translate(-50%, -50%); /* Căn giữa icon chính xác hơn */
-            width: 55px; /* Tăng kích thước icon */
-            height: 55px;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: #fff;
-            border: 4px solid #e9ecef; /* Border dày hơn */
+            background: var(--white-color);
+            border: 3px solid var(--primary-color); /* Border màu chính */
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 10; /* Đảm bảo icon nổi lên trên */
-            color: white; /* Màu chữ trong icon */
-            box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+            z-index: 10;
+            color: var(--primary-color); /* Icon màu chính */
+            box-shadow: 0 0 0 5px var(--white-color); /* Vòng trắng bao quanh */
+            transition: var(--transition-base);
         }
-
+        .timeline-item:hover .timeline-icon {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            transform: translate(-50%, -50%) scale(1.1); /* Phóng to nhẹ khi hover */
+        }
         .timeline-icon i {
-            font-size: 1.6rem; /* Tăng kích thước icon bên trong */
+            font-size: 1.4rem;
         }
-
-        /* Content position */
         .timeline-content {
             position: relative;
-            width: 45%;
-            padding: 25px 30px; /* Tăng padding */
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            width: 46%; /* Điều chỉnh nhẹ */
+            padding: 2rem;
+            background: var(--white-color);
+            border-radius: var(--border-radius-base);
+            box-shadow: var(--box-shadow-medium);
+            border: 1px solid var(--border-color);
             float: left;
+            transition: var(--transition-base);
         }
+         .timeline-item:hover .timeline-content {
+             border-color: var(--primary-color);
+         }
         .timeline-item.alt .timeline-content {
             float: right;
         }
-
         .timeline-content h5 {
             margin-top: 0;
             margin-bottom: 1rem;
             font-weight: 600;
-            color: #0d6efd; /* Màu tiêu đề */
+            color: var(--primary-color);
         }
         .timeline-content ul {
-            margin-bottom: 0;
-            padding-left: 0; /* Bỏ padding mặc định */
+            margin-bottom: 0; padding-left: 0;
         }
         .timeline-content ul li {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
+            margin-bottom: 0.6rem; line-height: 1.6; color: var(--grey-color); font-size: 0.95rem;
         }
-         .timeline-content ul li i.fa-clock { /* Icon đồng hồ */
-            color: #6c757d; /* Màu xám */
-            margin-right: 8px;
-         }
-          .timeline-content ul li i:not(.fa-clock) { /* Các icon khác */
-             margin-right: 5px;
-             width: 16px;
-             text-align: center;
+         .timeline-content ul li strong { color: var(--dark-color); font-weight: 500;}
+         .timeline-content ul li i.fa-clock { color: var(--grey-color); margin-right: 8px; font-size: 0.9em; }
+          .timeline-content ul li i:not(.fa-clock) {
+              margin-right: 6px; width: 18px; text-align: center;
+              color: var(--secondary-color); /* Màu nhấn cho icon hoạt động */
           }
+           .timeline-content ul li i.fas.fa-taxi { color: #f39c12; } /* Màu taxi */
+           .timeline-content ul li i.fas.fa-ticket-alt { color: #2ecc71; } /* Màu vé */
+           .timeline-content ul li i.fas.fa-utensils, .timeline-content ul li i.fas.fa-concierge-bell, .timeline-content ul li i.fas.fa-pepper-hot, .timeline-content ul li i.fas.fa-hotdog { color: #e74c3c; } /* Màu ăn uống */
+           .timeline-content ul li i.fas.fa-fish { color: #3498db; } /* Màu thủy cung */
+            .timeline-content ul li i.fas.fa-shopping-bag, .timeline-content ul li i.fas.fa-store, .timeline-content ul li i.fas.fa-shopping-cart { color: #9b59b6; } /* Màu mua sắm */
+            .timeline-content ul li i.fas.fa-home { color: var(--primary-color); } /* Màu về nhà */
+            .timeline-content ul li i.fas.fa-camera, .timeline-content ul li i.fas.fa-video, .timeline-content ul li i.fab.fa-google-drive, .timeline-content ul li i.fas.fa-images { color: #1abc9c;} /* Màu media */
 
-        /* Arrows */
+
+        /* Mũi tên Timeline */
         .timeline-content::before {
             content: '';
             position: absolute;
-            top: 25px; /* Điều chỉnh vị trí mũi tên */
-            right: -15px;
+            top: 28px;
+            right: -10px; /* Dịch gần hơn */
             width: 0;
             height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-left: 15px solid #fff;
-             filter: drop-shadow(-2px 2px 2px rgba(0,0,0,0.05)); /* Thêm shadow cho mũi tên */
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid var(--border-color); /* Mũi tên màu viền */
+            transition: border-left-color 0.3s ease-in-out;
+        }
+         .timeline-item:hover .timeline-content::before {
+            border-left-color: var(--primary-color);
+         }
+        .timeline-content::after { /* Lớp phủ màu trắng che viền */
+             content: '';
+             position: absolute;
+             top: 29px;
+             right: -8px;
+             width: 0;
+             height: 0;
+             border-top: 9px solid transparent;
+             border-bottom: 9px solid transparent;
+             border-left: 9px solid var(--white-color);
         }
         .timeline-item.alt .timeline-content::before {
-            right: auto;
-            left: -15px;
-            border-left: none;
-            border-right: 15px solid #fff;
-             filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.05));
+            right: auto; left: -10px; border-left: none; border-right: 10px solid var(--border-color); transition: border-right-color 0.3s ease-in-out;
+        }
+         .timeline-item:hover .timeline-item.alt .timeline-content::before {
+             border-right-color: var(--primary-color);
+         }
+        .timeline-item.alt .timeline-content::after {
+             right: auto; left: -8px; border-left: none; border-right: 9px solid var(--white-color);
         }
 
-        /* Adjust timeline for small screens */
+        /* Responsive Timeline */
         @media (max-width: 767px) {
-            .timeline::before {
-                left: 30px; /* Dịch đường line sang trái */
+            .timeline::before { left: 25px; }
+            .timeline-icon { left: 25px; }
+            .timeline-content { width: calc(100% - 65px); float: right !important; }
+            .timeline-item.alt .timeline-content { float: right !important; }
+            .timeline-content::before, .timeline-item.alt .timeline-content::before {
+                right: auto; left: -10px; border-left: none; border-right: 10px solid var(--border-color);
             }
-            .timeline-icon {
-                left: 30px; /* Dịch icon sang trái */
-            }
-            .timeline-content {
-                width: calc(100% - 80px); /* Tăng khoảng trống bên trái */
-                float: right !important; /* Tất cả content về bên phải */
-                padding: 20px;
-            }
-            .timeline-item.alt .timeline-content {
-                 float: right !important; /* Đảm bảo cả alt cũng sang phải */
-            }
-
-            .timeline-content::before,
-            .timeline-item.alt .timeline-content::before {
-                right: auto;
-                left: -15px;
-                border-left: none;
-                border-right: 15px solid #fff;
-                 filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.05));
+            .timeline-content::after, .timeline-item.alt .timeline-content::after {
+                 right: auto; left: -8px; border-left: none; border-right: 9px solid var(--white-color);
             }
         }
 
-        /* Budget Card */
+        /* Budget Section */
+        .budget-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-base);
+            overflow: hidden; /* Quan trọng cho bo góc table */
+             box-shadow: var(--box-shadow-light);
+        }
         .budget-card .card-header {
-            font-weight: 600; /* Đậm hơn */
+            font-weight: 600;
+            background-color: var(--light-bg); /* Nền header nhạt */
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 1.5rem;
         }
-        .budget-card table {
-            margin-bottom: 0; /* Bỏ margin dưới của table */
+         .budget-card .card-header i {
+            margin-right: 8px;
+         }
+        .budget-card .card-body {
+            padding: 0; /* Bỏ padding body để table sát viền */
         }
-        .budget-card table th {
-            background-color: #f8f9fa; /* Nền header bảng */
-            font-weight: 500;
-            white-space: nowrap; /* Chống xuống dòng header */
+        .budget-card table { margin-bottom: 0; }
+        .budget-card table thead th {
+             background-color: var(--white-color); /* Header trắng */
+             font-weight: 500;
+             font-size: 0.9rem;
+             color: var(--grey-color);
+             border-bottom: 1px solid var(--border-color);
+             padding: 0.8rem 1rem;
+             white-space: nowrap;
+             text-transform: uppercase;
+             letter-spacing: 0.5px;
         }
+        .budget-card table tbody td {
+            padding: 0.9rem 1rem;
+            vertical-align: middle;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .budget-card table tbody tr:first-child td {
+            border-top: none; /* Bỏ border top dòng đầu */
+        }
+         /* Bỏ hiệu ứng strip */
+         .table-striped tbody tr:nth-of-type(odd) {
+             background-color: var(--white-color) !important;
+         }
+         .table-hover tbody tr:hover {
+              background-color: rgba(74, 144, 226, 0.05) !important; /* Hover xanh rất nhạt */
+         }
         .budget-card table tfoot td {
-            font-weight: bold;
-            background-color: #e9ecef;
+            font-weight: 600;
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-top: 2px solid var(--border-color); /* Đường ngăn cách dày hơn */
         }
         .budget-card .badge {
-            font-size: 0.85em; /* Badge to hơn chút */
-            padding: 0.4em 0.6em;
+            font-size: 0.8rem;
+            padding: 0.4em 0.8em;
+            border-radius: 20px; /* Badge hình viên thuốc */
+            font-weight: 500;
         }
-        .budget-summary-card table th,
-        .budget-summary-card table td {
+         .badge.bg-info { background-color: #e0f7fa !important; color: #00796b !important; } /* Màu badge tiền mặt */
+         .badge.bg-danger { background-color: #fff3e0 !important; color: #ef6c00 !important; } /* Màu badge thẻ */
+
+        .budget-summary-card {
+            border-width: 1px; /* Border mỏng hơn */
+            border-color: var(--primary-color) !important;
+            border-radius: var(--border-radius-base);
+             box-shadow: var(--box-shadow-medium);
+             overflow: hidden;
+        }
+        .budget-summary-card .card-header {
+            background: linear-gradient(90deg, var(--primary-color), lighten(var(--primary-color), 10%)); /* Gradient header */
+            font-size: 1.2rem !important;
+            padding: 1rem 1.5rem;
+        }
+        .budget-summary-card table th, .budget-summary-card table td {
             vertical-align: middle;
+            padding: 1rem;
         }
-        .budget-summary-card tfoot td {
+         .budget-summary-card table thead th {
+             background-color: var(--light-bg);
+             font-weight: 600;
+             color: var(--dark-color);
+         }
+        .budget-summary-card table tfoot td {
              font-size: 1.1rem;
+             font-weight: 700;
         }
-        .alert i { /* Icon trong alert */
-            vertical-align: middle;
-            margin-right: 5px;
+         .budget-summary-card .table-bordered {
+             border-color: var(--border-color);
+         }
+        .budget-summary-card .alert {
+            border-radius: 0 0 var(--border-radius-base) var(--border-radius-base) !important;
+            margin-bottom: 0 !important;
+            border: none;
+            background-color: #fff9e6; /* Nền vàng nhạt */
+            color: #8a6d3b; /* Chữ nâu vàng */
+            padding: 1rem 1.5rem;
+        }
+        .budget-summary-card .alert i {
+            color: #ffa000; /* Icon vàng */
         }
 
         /* Packing List Accordion */
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-base) !important;
+            overflow: hidden;
+            box-shadow: none; /* Bỏ shadow mặc định */
+            transition: var(--transition-base);
+        }
+        .accordion-item:hover {
+            box-shadow: var(--box-shadow-light);
+        }
+        .accordion-header {
+             border-radius: var(--border-radius-base); /* Đảm bảo header bo góc */
+        }
         .accordion-button {
-            font-weight: 500;
+            font-weight: 600;
+            padding: 1.2rem 1.5rem; /* Padding lớn hơn */
+            color: var(--dark-color);
+            background-color: var(--white-color);
+            box-shadow: none !important; /* Bỏ shadow khi focus */
+            border-radius: var(--border-radius-base) !important;
         }
         .accordion-button:not(.collapsed) {
-            color: #0a58ca; /* Đổi màu khi mở */
-            background-color: #e7f1ff;
-            box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+            color: var(--primary-color);
+            background-color: rgba(74, 144, 226, 0.05); /* Nền xanh rất nhạt khi mở */
+            box-shadow: inset 0 -1px 0 var(--border-color) !important;
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
         }
-        .accordion-button:focus {
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Focus rõ hơn */
-            border-color: #86b7fe;
+        .accordion-button::after { /* Tùy chỉnh icon mũi tên */
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a90e2'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+             transform: scale(1.2);
+             transition: transform 0.2s ease-in-out;
         }
-        .accordion-button i { /* Icon đầu dòng accordion */
-            margin-right: 10px;
-            width: 20px;
+        .accordion-button:not(.collapsed)::after {
+            transform: scale(1.2) rotate(-180deg);
+        }
+        .accordion-button i {
+            margin-right: 12px;
+            width: 22px;
             text-align: center;
+            color: var(--primary-color); /* Icon màu chính */
         }
-        .accordion-item {
-            margin-bottom: 15px; /* Khoảng cách giữa các item */
-            border: 1px solid #dee2e6;
-            border-radius: 8px !important; /* Bo góc mạnh hơn, áp dụng cho tất cả */
-            overflow: hidden; /* Đảm bảo bo góc đúng */
+        .accordion-body {
+            padding: 0 1.5rem 1.5rem 1.5rem; /* Padding cho body */
         }
-         .accordion-body ul {
-             padding-left: 1rem; /* Thụt lề list */
-             margin-bottom: 0;
+        .accordion-body ul {
+             padding-left: 0; margin-bottom: 0;
+        }
+        .accordion-body li.list-group-item {
+             padding: 0.8rem 0;
+             border: none;
+             border-bottom: 1px solid var(--border-color); /* Ngăn cách nhẹ */
+        }
+        .accordion-body li.list-group-item:last-child {
+             border-bottom: none;
+        }
+         .accordion-body .form-check-label {
+             cursor: pointer;
+             color: var(--grey-color);
+             transition: var(--transition-base);
          }
-         .accordion-body li {
-             padding: 0.5rem 0;
+         .accordion-body .form-check-input:checked + .form-check-label {
+              color: var(--dark-color);
+              text-decoration: line-through;
+              opacity: 0.7;
          }
-        .form-check-input {
-            margin-top: 0.3em; /* Căn chỉnh checkbox */
-            cursor: pointer;
-        }
+         .accordion-body .form-check-input {
+            margin-top: 0.25em;
+            border-color: var(--border-color);
+            transition: var(--transition-base);
+         }
+         .accordion-body .form-check-input:checked {
+             background-color: var(--primary-color);
+             border-color: var(--primary-color);
+         }
+         .accordion-body .form-check-input:focus {
+              box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+         }
+
 
         /* Contingency Section Cards */
         #contingency .card {
-            border-radius: 8px;
+            border-radius: var(--border-radius-base);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--box-shadow-light);
+            height: 100%;
         }
-         #contingency .card-header {
+        #contingency .card-header {
             font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+         #contingency .card-header.bg-warning { background-color: #fff9e6 !important; color: #ffa000 !important; border-color: #ffe0b2 !important; } /* Màu header thời tiết */
+         #contingency .card-header.bg-danger { background-color: #ffebee !important; color: #d32f2f !important; border-color: #ffcdd2 !important; } /* Màu header y tế */
+          #contingency .card-header i { margin-right: 8px;}
+
+        #contingency .card-body {
+            padding: 1.5rem;
+        }
+         #contingency .card-body hr {
+             margin: 1.5rem 0; border-top: 1px solid var(--border-color);
          }
-         #contingency .card-body ul {
-             margin-bottom: 0;
-             padding-left: 0;
+         #contingency .card-body h6 {
+             font-weight: 600; margin-bottom: 0.7rem; color: var(--dark-color);
          }
-         #contingency .card-body li {
-             margin-bottom: 0.75rem;
+          #contingency .card-body h6 i { color: var(--grey-color); width: 20px; text-align: center;}
+         #contingency .card-body p, #contingency .card-body li {
+             font-size: 0.95rem; color: var(--grey-color);
          }
-          #contingency .card-body strong i {
-             width: 20px;
-             text-align: center;
-             margin-right: 5px;
-          }
-          #contingency .card-body hr {
-             margin: 1rem 0;
-          }
+         #contingency .card-body li strong i {
+            width: 20px; text-align: center; margin-right: 5px;
+         }
+          /* Y tế */
+          #contingency .card-body ul { padding-left: 0; list-style: none;}
+          #contingency .card-body strong.text-danger { font-size: 1.5rem !important; color: #d32f2f !important;}
+          #contingency .card-body a { color: var(--dark-color); text-decoration: underline; }
+          #contingency .card-body a:hover { color: var(--primary-color); }
+          #contingency .card-body i.fa-clinic-medical { color: #4a90e2;}
+          #contingency .card-body i.fa-hospital { color: #27ae60;}
+          #contingency .card-body i.fa-user-md { color: #56ccf2;}
+          #contingency .card-body i.fa-hospital-user { color: #f5a623;}
+
 
         /* Footer */
         footer {
-            margin-top: 40px;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            margin-top: 0; /* Bỏ margin top vì section đã có padding bottom lớn */
+            padding: 2.5rem 0;
+            background-color: var(--dark-color);
+            color: rgba(255, 255, 255, 0.6);
         }
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+        footer small {
+             font-size: 0.85rem;
+        }
+
+        /* AOS Animation Overrides (optional) */
+         [data-aos="fade-up"] { transition-property: transform, opacity; }
+         [data-aos="fade-right"] { transition-property: transform, opacity; }
+         [data-aos="fade-left"] { transition-property: transform, opacity; }
+         [data-aos="zoom-in-up"] { transition-property: transform, opacity; }
+
     </style>
     <!-- === EMBEDDED CUSTOM CSS END === -->
 
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70"> <!-- Thêm data attributes cho scrollspy -->
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"> <i class="fas fa-map-marked-alt"></i> Hà Nội Trip 2025</a>
+            <a class="navbar-brand" href="#"> <i class="fas fa-feather-alt"></i> Hà Nội Trip</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Sửa lại để dùng nav-pills cho scrollspy -->
                 <ul class="navbar-nav nav-pills ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#overview">Tổng Quan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#personnel">Phân Công</a></li>
@@ -417,57 +698,58 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+    <header class="hero-section">
         <div class="container" data-aos="fade-in" data-aos-duration="1500">
-            <h1 class="display-3 fw-bold">🏙️ Kế Hoạch Du Lịch Hà Nội</h1>
-            <p class="lead fs-4">Dịp Lễ 30/4 - 1/5/2025 Cùng Gia Đình</p>
+            <h1 class="display-3 fw-bold">🏙️ Khám Phá Hà Nội</h1>
+            <p class="lead">Lịch trình chi tiết cho chuyến đi 30/4 - 1/5/2025 của gia đình</p>
         </div>
     </header>
 
     <!-- Overview Section -->
-    <section id="overview" class="py-5 section-bg">
+    <section id="overview" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-info-circle"></i> Thông Tin Chung</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-clipboard-list"></i> Tổng Quan Chuyến Đi</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card info-card h-100">
-                        <div class="icon-circle"><i class="fas fa-calendar-alt fa-2x"></i></div>
-                        <div class="card-body text-center pt-0"> {/* Thêm pt-0 */}
-                            <h5 class="card-title">Thời gian & Nhóm</h5>
+                    <div class="card info-card">
+                        <div class="icon-circle"><i class="fas fa-calendar-check fa-2x"></i></div>
+                        <div class="card-body text-center pt-0">
+                            <h5 class="card-title">Thời gian & Thành viên</h5>
                             <p class="card-text"><strong>Thời gian:</strong> 30/4 - 1/5/2025 (2 ngày)</p>
-                            <p class="card-text"><strong>Số người:</strong> 11</p>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li><i class="fas fa-user-tie text-primary me-2"></i>3 người lớn 50+ (1 đau lưng)</li>
-                                <li><i class="fas fa-user text-success me-2"></i>5 người lớn 30-40 (1 bà bầu 4 tháng)</li>
-                                <li><i class="fas fa-child text-warning me-2"></i>3 trẻ em (1, 4, 10 tuổi)</li>
+                            <p class="card-text"><strong>Số người:</strong> 11 người</p>
+                            <ul class="list-unstyled small mt-3">
+                                <li><i class="fas fa-users"></i> 3 người lớn 50+ (1 đau lưng)</li>
+                                <li><i class="fas fa-user-friends"></i> 5 người lớn 30-40 (1 bà bầu 4 tháng)</li>
+                                <li><i class="fas fa-child"></i> 3 trẻ em (1, 4, 10 tuổi)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card info-card h-100">
-                        <div class="icon-circle"><i class="fas fa-money-bill-wave fa-2x"></i></div>
+                    <div class="card info-card">
+                        <div class="icon-circle"><i class="fas fa-coins fa-2x"></i></div>
                         <div class="card-body text-center pt-0">
-                            <h5 class="card-title">Ngân sách & Thanh toán</h5>
-                            <p class="card-text"><strong>Tổng ngân sách:</strong> 7.000.000đ</p>
-                             <p class="card-text mb-1"><i class="fas fa-wallet text-info me-2"></i>2.000.000đ tiền mặt</p>
-                             <p class="card-text"><i class="far fa-credit-card text-danger me-2"></i>5.000.000đ thẻ tín dụng</p>
-                             <div class="progress mt-3" style="height: 12px; border-radius: 6px;">
-                                <div class="progress-bar bg-info" role="progressbar" style="width: 28.5%;" aria-valuenow="28.5" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" title="Tiền mặt: 2.000.000đ"></div>
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 71.5%;" aria-valuenow="71.5" aria-valuemin="0" aria-valuemax="100" data-bs-toggle="tooltip" title="Thẻ tín dụng: 5.000.000đ"></div>
+                            <h5 class="card-title">Ngân Sách Dự Kiến</h5>
+                            <p class="card-text"><strong>Tổng:</strong> 7.000.000đ</p>
+                            <p class="card-text mb-1"><i class="fas fa-wallet me-2" style="color: #56ccf2;"></i>2.000.000đ tiền mặt</p>
+                            <p class="card-text"><i class="far fa-credit-card me-2" style="color: var(--secondary-color);"></i>5.000.000đ thẻ</p>
+                             <div class="progress mt-3" style="height: 8px; border-radius: 4px;">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 28.5%;" data-bs-toggle="tooltip" title="Tiền mặt: 2.000.000đ"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 71.5%;" data-bs-toggle="tooltip" title="Thẻ tín dụng: 5.000.000đ"></div>
                             </div>
-                             <small class="text-muted mt-1 d-block">Phân bổ dự kiến</small>
+                            <small class="text-muted mt-2 d-block">Phân bổ dự kiến</small>
                         </div>
                     </div>
                 </div>
                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card info-card h-100">
-                         <div class="icon-circle"><i class="fas fa-map-signs fa-2x"></i></div> {/* Đổi icon */}
+                    <div class="card info-card">
+                         <div class="icon-circle"><i class="fas fa-route fa-2x"></i></div>
                         <div class="card-body text-center pt-0">
-                            <h5 class="card-title">Phương tiện & Lưu trú</h5>
-                            <p class="card-text mb-1"><strong>Di chuyển:</strong> <i class="fas fa-taxi text-warning me-1"></i> Taxi (2 xe 7 chỗ)</p>
-                            <p class="card-text"><strong>Lưu trú:</strong> <i class="fas fa-home text-success me-1"></i> 2 nhà riêng</p>
-                            <p class="card-text mt-3"><i class="fas fa-map-marker-alt text-primary me-2"></i>Kiến Hưng, Hà Đông (307 M4 & 305 M3)</p>
+                            <h5 class="card-title">Di Chuyển & Lưu Trú</h5>
+                            <p class="card-text mb-1"><strong>Phương tiện:</strong> <i class="fas fa-taxi me-1" style="color: #f39c12;"></i> Taxi (2 xe 7 chỗ)</p>
+                            <p class="card-text"><strong>Nơi ở:</strong> <i class="fas fa-home me-1" style="color: #2ecc71;"></i> 2 nhà riêng</p>
+                            <p class="card-text mt-3"><i class="fas fa-map-marker-alt me-2" style="color: var(--primary-color);"></i>Kiến Hưng, Hà Đông</p>
+                            <small class="text-muted d-block">(307 M4 & 305 M3)</small>
                         </div>
                     </div>
                 </div>
@@ -476,53 +758,43 @@
     </section>
 
     <!-- Personnel Section -->
-    <section id="personnel" class="py-5">
+    <section id="personnel">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-users-cog"></i> Phân Công Nhân Sự</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-user-check"></i> Phân Công Nhiệm Vụ</h2>
             <div class="row justify-content-center g-4">
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in-up"> {/* Thay đổi hiệu ứng */}
-                    <div class="card personnel-card text-center h-100">
-                        <div class="card-body">
-                            <i class="fas fa-user-tie fa-3x mb-3 text-primary"></i>
-                            <h5 class="card-title">Bạn</h5>
-                            <p class="card-text text-muted">Quản lý tài chính, đặt taxi</p>
-                        </div>
+                 <div class="col-lg-4 col-md-6" data-aos="zoom-in-up">
+                    <div class="personnel-card h-100">
+                         <i class="fas fa-wallet fa-3x"></i>
+                         <h5 class="card-title">Bạn</h5>
+                         <p>Quản lý tài chính, đặt taxi</p>
                     </div>
                 </div>
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="card personnel-card text-center h-100">
-                         <div class="card-body">
-                             <i class="fas fa-laptop-code fa-3x mb-3 text-info"></i>
-                            <h5 class="card-title">Em gái</h5>
-                            <p class="card-text text-muted">Công nghệ, tìm đường, đặt vé online</p>
-                         </div>
-                    </div>
+                     <div class="personnel-card h-100">
+                         <i class="fas fa-map-location-dot fa-3x"></i>
+                         <h5 class="card-title">Em gái</h5>
+                         <p>Công nghệ, tìm đường, đặt vé online</p>
+                     </div>
                 </div>
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="card personnel-card text-center h-100">
-                        <div class="card-body">
-                             <i class="fas fa-female fa-3x mb-3 text-danger"></i> <i class="fas fa-baby-carriage text-danger ms-1"></i>
-                            <h5 class="card-title">Vợ (Bà bầu)</h5>
-                            <p class="card-text text-muted">Chuẩn bị đồ dùng, đồ ăn nhẹ</p>
-                        </div>
-                    </div>
+                     <div class="personnel-card h-100">
+                          <i class="fas fa-suitcase-rolling fa-3x"></i>
+                         <h5 class="card-title">Vợ (Bà bầu)</h5>
+                         <p>Chuẩn bị đồ dùng, đồ ăn nhẹ</p>
+                     </div>
                 </div>
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-delay="300">
-                     <div class="card personnel-card text-center h-100">
-                         <div class="card-body">
-                            <i class="fas fa-utensils fa-3x mb-3 text-success"></i>
-                            <h5 class="card-title">Mẹ vợ</h5>
-                            <p class="card-text text-muted">Nấu ăn, chuẩn bị đồ ăn dặm</p>
-                         </div>
-                    </div>
+                     <div class="personnel-card h-100">
+                          <i class="fas fa-utensils fa-3x"></i>
+                         <h5 class="card-title">Mẹ vợ</h5>
+                         <p>Nấu ăn, chuẩn bị đồ ăn dặm</p>
+                     </div>
                 </div>
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-delay="400">
-                     <div class="card personnel-card text-center h-100">
-                         <div class="card-body">
-                             <i class="fas fa-male fa-3x mb-3 text-warning"></i> <i class="fas fa-briefcase-medical text-warning ms-1"></i>
-                            <h5 class="card-title">Bố vợ</h5>
-                            <p class="card-text text-muted">Cần hỗ trợ (đau lưng)</p>
-                         </div>
+                     <div class="personnel-card h-100">
+                          <i class="fas fa-briefcase-medical fa-3x"></i>
+                         <h5 class="card-title">Bố vợ</h5>
+                         <p>Cần hỗ trợ (đau lưng)</p>
                      </div>
                  </div>
             </div>
@@ -530,61 +802,61 @@
     </section>
 
     <!-- Itinerary Day 1 -->
-    <section id="day1" class="py-5 section-bg timeline-section">
+    <section id="day1" class="section-bg timeline-section">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-alt"></i> Lịch Trình Ngày 30/4/2025 (Thứ Tư)</h2>
-            <h4 class="text-center mb-5 text-primary fw-bold" data-aos="fade-up">🐠 THỦY CUNG & TIMES CITY 🛍️</h4>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-alt"></i> Lịch Trình Ngày 30/4 (Thứ Tư)</h2>
+            <h4 class="text-center mb-5 fw-bold" style="color: var(--primary-color);" data-aos="fade-up">🐠 Thủy Cung Times City & Vui Chơi 🛍️</h4>
             <div class="timeline">
                 <!-- Morning -->
                 <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon bg-warning"><i class="fas fa-sun"></i></div>
+                    <div class="timeline-icon"><i class="fas fa-sun"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Sáng</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                             <li><i class="far fa-clock"></i><strong>7:00-7:30:</strong> 👩‍🍳 Mẹ vợ - Chuẩn bị bữa sáng, đồ ăn dặm.</li>
                             <li><i class="far fa-clock"></i><strong>7:30-8:00:</strong> Cả nhà ăn sáng.</li>
                             <li><i class="far fa-clock"></i><strong>8:00-8:45:</strong> 🤰 Vợ - Chuẩn bị đồ dùng (Kiểm tra đồ ăn dặm, thuốc cho bố).</li>
                             <li><i class="far fa-clock"></i><strong>8:45-9:00:</strong> 👨 Bạn - Đặt 2 taxi 7 chỗ (Mai Linh: <a href="tel:02438222666">024.38.222.666</a>).</li>
                              <li><i class="far fa-clock"></i><strong>9:00-9:15:</strong> 👧 Em gái - Kiểm tra lộ trình, giờ mở cửa Thủy Cung.</li>
-                             <li><i class="far fa-clock"></i><strong>9:15-10:00:</strong> <i class="fas fa-taxi text-warning"></i> Di chuyển đến Times City (Bạn TT: 400k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>10:00-10:15:</strong> <i class="fas fa-ticket-alt text-success"></i> Bạn + Em gái - Mua vé Thủy Cung (Em gái check ưu đãi, Bạn TT: 1.480k thẻ).</li>
-                             <li><i class="far fa-clock"></i><strong>10:15-12:30:</strong> <i class="fas fa-fish text-info"></i> Tham quan Thủy Cung (Mẹ chăm cháu, Em gái chụp ảnh <i class="fas fa-camera"></i>, Vợ+Bạn hỗ trợ bố, 11:00 cho bé ăn dặm, 11:30 xem show <i class="fas fa-person-swimming"></i>).</li>
+                             <li><i class="far fa-clock"></i><strong>9:15-10:00:</strong> <i class="fas fa-taxi"></i> Di chuyển đến Times City (Bạn TT: 400k tiền mặt).</li>
+                             <li><i class="far fa-clock"></i><strong>10:00-10:15:</strong> <i class="fas fa-ticket-alt"></i> Bạn + Em gái - Mua vé Thủy Cung (Em gái check ưu đãi, Bạn TT: 1.480k thẻ).</li>
+                             <li><i class="far fa-clock"></i><strong>10:15-12:30:</strong> <i class="fas fa-fish"></i> Tham quan Thủy Cung (Mẹ chăm cháu, Em gái <i class="fas fa-camera"></i>, Vợ+Bạn hỗ trợ bố, 11:00 cho bé ăn dặm, 11:30 xem show <i class="fas fa-person-swimming"></i>).</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Lunch -->
                 <div class="timeline-item alt" data-aos="fade-left">
-                    <div class="timeline-icon bg-success"><i class="fas fa-utensils"></i></div>
+                    <div class="timeline-icon"><i class="fas fa-utensils"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Trưa</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                             <li><i class="far fa-clock"></i><strong>12:30-13:00:</strong> 👨 Bạn + 👧 Em gái - Tìm và đặt nhà hàng (Em gái check app, Bạn gọi).</li>
-                            <li><i class="far fa-clock"></i><strong>13:00-14:00:</strong> <i class="fas fa-concierge-bell text-danger"></i> Ăn trưa tại Hoàng Yến Cuisine (T5) (Bạn TT: 950k thẻ).</li>
+                            <li><i class="far fa-clock"></i><strong>13:00-14:00:</strong> <i class="fas fa-concierge-bell"></i> Ăn trưa tại Hoàng Yến Cuisine (T5) (Bạn TT: 950k thẻ).</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Afternoon -->
                 <div class="timeline-item" data-aos="fade-right">
-                     <div class="timeline-icon bg-info"><i class="fas fa-shopping-bag"></i></div>
+                     <div class="timeline-icon"><i class="fas fa-shopping-bag"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Chiều</h5>
-                        <ul class="list-unstyled">
-                            <li><i class="far fa-clock"></i><strong>14:00-16:00:</strong> <i class="fas fa-store text-primary"></i> Khám phá TTTM (Bạn+Vợ hỗ trợ bố ở <i class="fas fa-coffee text-secondary"></i> Highland, Em gái dẫn trẻ đi chơi <i class="fas fa-gamepad text-warning"></i>, Bạn TT cafe: 330k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>16:00-17:30:</strong> <i class="fas fa-fountain text-info"></i> Công viên Times City (16:30 Mẹ cho bé ăn dặm, Em gái quay nhạc nước <i class="fas fa-video text-danger"></i>).</li>
+                        <ul>
+                            <li><i class="far fa-clock"></i><strong>14:00-16:00:</strong> <i class="fas fa-store"></i> Khám phá TTTM (Bạn+Vợ hỗ trợ bố ở <i class="fas fa-coffee" style="color: #8b572a;"></i> Highland, Em gái dẫn trẻ đi chơi <i class="fas fa-gamepad"></i>, Bạn TT cafe: 330k tiền mặt).</li>
+                             <li><i class="far fa-clock"></i><strong>16:00-17:30:</strong> <i class="fas fa-fountain" style="color:#5dade2;"></i> Công viên Times City (16:30 Mẹ cho bé ăn dặm, Em gái quay nhạc nước <i class="fas fa-video"></i>).</li>
                         </ul>
                     </div>
                 </div>
                  <!-- Evening -->
                 <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon bg-dark"><i class="fas fa-moon"></i></div>
+                     <div class="timeline-icon"><i class="fas fa-moon"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Tối</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                            <li><i class="far fa-clock"></i><strong>17:30-18:00:</strong> 👧 Em gái - Kiểm tra, đặt bàn ăn tối.</li>
-                            <li><i class="far fa-clock"></i><strong>18:00-19:00:</strong> <i class="fas fa-pepper-hot text-danger"></i> Ăn tối tại Bumbu Desa (TTTM) (Bạn TT: 880k thẻ).</li>
+                            <li><i class="far fa-clock"></i><strong>18:00-19:00:</strong> <i class="fas fa-pepper-hot"></i> Ăn tối tại Bumbu Desa (TTTM) (Bạn TT: 880k thẻ).</li>
                             <li><i class="far fa-clock"></i><strong>19:00:</strong> 👨 Bạn - Đặt 2 taxi về (440k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>19:15-20:00:</strong> <i class="fas fa-home text-primary"></i> Di chuyển về Kiến Hưng.</li>
-                            <li><i class="far fa-clock"></i><strong>20:00-21:00:</strong> 👧 Em gái - Chia sẻ ảnh <i class="fab fa-google-drive text-success"></i> (Google Photos).</li>
+                             <li><i class="far fa-clock"></i><strong>19:15-20:00:</strong> <i class="fas fa-home"></i> Di chuyển về Kiến Hưng.</li>
+                            <li><i class="far fa-clock"></i><strong>20:00-21:00:</strong> 👧 Em gái - Chia sẻ ảnh <i class="fab fa-google-drive"></i> (Google Photos).</li>
                         </ul>
                     </div>
                 </div>
@@ -593,60 +865,60 @@
     </section>
 
      <!-- Itinerary Day 2 -->
-    <section id="day2" class="py-5 timeline-section">
+    <section id="day2" class="timeline-section">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-check"></i> Lịch Trình Ngày 1/5/2025 (Thứ Năm)</h2>
-            <h4 class="text-center mb-5 text-success fw-bold" data-aos="fade-up">🏞️ HỒ HOÀN KIẾM & AEON MALL 🛒</h4>
+             <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-check"></i> Lịch Trình Ngày 1/5 (Thứ Năm)</h2>
+            <h4 class="text-center mb-5 fw-bold" style="color: #27ae60;" data-aos="fade-up">🏞️ Hồ Hoàn Kiếm & Mua Sắm AEON 🛒</h4> {/* Màu khác */}
              <div class="timeline">
                  <!-- Morning -->
                  <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon bg-warning"><i class="fas fa-sun"></i></div>
+                    <div class="timeline-icon"><i class="fas fa-sun"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Sáng</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                             <li><i class="far fa-clock"></i><strong>7:00-7:30:</strong> 👩‍🍳 Mẹ vợ - Chuẩn bị bữa sáng, đồ ăn dặm.</li>
                             <li><i class="far fa-clock"></i><strong>7:30-8:00:</strong> Cả nhà ăn sáng.</li>
-                            <li><i class="far fa-clock"></i><strong>8:00-9:00:</strong> 🤰 Vợ - Chuẩn bị đồ dùng (Đồ ăn dặm 2 bữa, dù/áo mưa <i class="fas fa-umbrella text-info"></i>, đai lưng cho bố).</li>
-                            <li><i class="far fa-clock"></i><strong>9:00-9:30:</strong> 👧 Em gái - Kiểm tra thời tiết <i class="fas fa-cloud-sun-rain text-secondary"></i>, lộ trình, giao thông.</li>
+                            <li><i class="far fa-clock"></i><strong>8:00-9:00:</strong> 🤰 Vợ - Chuẩn bị đồ dùng (Đồ ăn dặm 2 bữa, dù/áo mưa <i class="fas fa-umbrella" style="color:#5dade2;"></i>, đai lưng cho bố).</li>
+                            <li><i class="far fa-clock"></i><strong>9:00-9:30:</strong> 👧 Em gái - Kiểm tra thời tiết <i class="fas fa-cloud-sun-rain" style="color:var(--grey-color)"></i>, lộ trình, giao thông.</li>
                             <li><i class="far fa-clock"></i><strong>9:30:</strong> 👨 Bạn - Đặt 2 taxi đi Hồ Gươm (400k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>9:45-10:30:</strong> <i class="fas fa-taxi text-warning"></i> Di chuyển đến Hồ Hoàn Kiếm.</li>
-                             <li><i class="far fa-clock"></i><strong>10:30-12:00:</strong> <i class="fas fa-landmark text-success"></i> Khám phá Hồ Hoàn Kiếm (Em gái chụp ảnh Tháp Rùa <i class="fas fa-camera"></i>, Bạn+Vợ hỗ trợ bố, 11:30 Mẹ cho bé ăn dặm tại <i class="fas fa-coffee text-secondary"></i> quán cafe, Bạn TT cafe: 330k tiền mặt).</li>
+                             <li><i class="far fa-clock"></i><strong>9:45-10:30:</strong> <i class="fas fa-taxi"></i> Di chuyển đến Hồ Hoàn Kiếm.</li>
+                             <li><i class="far fa-clock"></i><strong>10:30-12:00:</strong> <i class="fas fa-landmark" style="color:#27ae60;"></i> Khám phá Hồ Hoàn Kiếm (Em gái <i class="fas fa-camera"></i> Tháp Rùa, Bạn+Vợ hỗ trợ bố, 11:30 Mẹ cho bé ăn dặm tại <i class="fas fa-coffee" style="color:#8b572a;"></i> quán cafe, Bạn TT cafe: 330k tiền mặt).</li>
                         </ul>
                     </div>
                 </div>
                  <!-- Lunch -->
                  <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon bg-success"><i class="fas fa-utensils"></i></div>
+                     <div class="timeline-icon"><i class="fas fa-utensils"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Trưa</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                             <li><i class="far fa-clock"></i><strong>11:45:</strong> 👨 Bạn - Gọi đặt bàn Quán Ăn Ngon.</li>
-                             <li><i class="far fa-clock"></i><strong>12:00-13:30:</strong> <i class="fas fa-concierge-bell text-danger"></i> Ăn trưa tại Quán Ăn Ngon (18 Phan Bội Châu) (Bạn TT: 760k thẻ).</li>
+                             <li><i class="far fa-clock"></i><strong>12:00-13:30:</strong> <i class="fas fa-concierge-bell"></i> Ăn trưa tại Quán Ăn Ngon (18 Phan Bội Châu) (Bạn TT: 760k thẻ).</li>
                         </ul>
                     </div>
                 </div>
                  <!-- Afternoon -->
                  <div class="timeline-item" data-aos="fade-right">
-                     <div class="timeline-icon bg-info"><i class="fas fa-shopping-cart"></i></div>
+                     <div class="timeline-icon"><i class="fas fa-shopping-cart"></i></div>
                     <div class="timeline-content">
                         <h5>Buổi Chiều</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                              <li><i class="far fa-clock"></i><strong>13:30:</strong> 👨 Bạn - Đặt 2 taxi đến AEON Mall Long Biên (300k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>14:00-17:00:</strong> <i class="fas fa-store-alt text-primary"></i> AEON Mall (Bạn+Mẹ hỗ trợ bố ở food court, Vợ+người lớn mua sắm <i class="fas fa-credit-card"></i>, Em gái đưa trẻ đến Tini World <i class="fas fa-child text-warning"></i> - Bạn TT: 300k thẻ, Bạn TT cafe: 330k tiền mặt, Bạn TT mua sắm: 400k thẻ, 15:30 Mẹ cho bé ăn dặm).</li>
+                             <li><i class="far fa-clock"></i><strong>14:00-17:00:</strong> <i class="fas fa-store"></i> AEON Mall (Bạn+Mẹ hỗ trợ bố ở food court, Vợ+người lớn <i class="fas fa-credit-card" style="color:#9b59b6;"></i> mua sắm, Em gái đưa trẻ đến Tini World <i class="fas fa-child" style="color:#f39c12;"></i> - Bạn TT: 300k thẻ, Bạn TT cafe: 330k tiền mặt, Bạn TT mua sắm: 400k thẻ, 15:30 Mẹ cho bé ăn dặm).</li>
                         </ul>
                     </div>
                 </div>
                  <!-- Evening -->
                  <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon bg-dark"><i class="fas fa-moon"></i></div>
+                     <div class="timeline-icon"><i class="fas fa-moon"></i></div>
                     <div class="timeline-content">
                          <h5>Buổi Tối</h5>
-                        <ul class="list-unstyled">
+                        <ul>
                             <li><i class="far fa-clock"></i><strong>17:00:</strong> 👧 Em gái - Kiểm tra, đặt bàn Shabu-ya.</li>
-                             <li><i class="far fa-clock"></i><strong>17:00-18:30:</strong> <i class="fas fa-hotdog text-warning"></i> Ăn tối lẩu tại Shabu-ya (AEON Mall) (Bạn TT: 880k thẻ).</li>
+                             <li><i class="far fa-clock"></i><strong>17:00-18:30:</strong> <i class="fas fa-hotdog"></i> Ăn tối lẩu tại Shabu-ya (AEON Mall) (Bạn TT: 880k thẻ).</li>
                             <li><i class="far fa-clock"></i><strong>18:30:</strong> 👨 Bạn - Đặt 2 taxi về (440k tiền mặt).</li>
-                             <li><i class="far fa-clock"></i><strong>18:45-19:30:</strong> <i class="fas fa-home text-primary"></i> Di chuyển về Kiến Hưng.</li>
-                            <li><i class="far fa-clock"></i><strong>19:30-20:30:</strong> 👧 Em gái - Tổng hợp ảnh <i class="fas fa-images text-info"></i>, video <i class="fas fa-video text-danger"></i>.</li>
+                             <li><i class="far fa-clock"></i><strong>18:45-19:30:</strong> <i class="fas fa-home"></i> Di chuyển về Kiến Hưng.</li>
+                            <li><i class="far fa-clock"></i><strong>19:30-20:30:</strong> 👧 Em gái - Tổng hợp ảnh <i class="fas fa-images"></i>, video <i class="fas fa-video"></i>.</li>
                         </ul>
                     </div>
                 </div>
@@ -655,34 +927,26 @@
     </section>
 
     <!-- Budget Section -->
-    <section id="budget" class="py-5 section-bg">
+    <section id="budget" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-file-invoice-dollar"></i> Ngân Sách Chi Tiết</h2>
-            <div class="row g-4">
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-calculator"></i> Ngân Sách Chi Tiết</h2>
+            <div class="row g-4 g-lg-5"> {/* Tăng khoảng cách g-lg-5 */}
                 <!-- Taxi -->
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="card h-100 budget-card">
-                        <div class="card-header bg-primary text-white"><i class="fas fa-taxi me-2"></i>Di Chuyển (Taxi) - Bạn TT</div>
-                        <div class="card-body p-0">
+                        <div class="card-header"><i class="fas fa-taxi me-2" style="color:#f39c12;"></i>Di Chuyển (Taxi) - Bạn TT</div>
+                        <div class="card-body">
                              <div class="table-responsive">
-                                <table class="table table-striped table-hover mb-0">
-                                    <thead>
-                                        <tr><th>Lộ trình</th><th>Số xe</th><th>Đơn giá</th><th>Thành tiền</th><th>TT</th></tr>
-                                    </thead>
+                                <table class="table table-hover mb-0">
+                                    <thead><tr><th>Lộ trình</th><th>Số xe</th><th>Đơn giá</th><th>Thành tiền</th><th>TT</th></tr></thead>
                                     <tbody>
-                                        <tr><td>Kiến Hưng → Times</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
-                                        <tr><td>Times → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
-                                        <tr><td>Kiến Hưng → Hồ Gươm</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
-                                        <tr><td>Hồ Gươm → AEON</td><td>2</td><td>150k</td><td>300k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
-                                        <tr><td>AEON → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
+                                        <tr><td>Kiến Hưng → Times</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Times → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Kiến Hưng → Hồ Gươm</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Hồ Gươm → AEON</td><td>2</td><td>150k</td><td>300k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>AEON → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
                                     </tbody>
-                                    <tfoot>
-                                        <tr class="fw-bold">
-                                            <td colspan="3" class="text-end">Tổng cộng</td>
-                                            <td>1.980k</td>
-                                            <td></td>
-                                        </tr>
-                                    </tfoot>
+                                    <tfoot><tr><td colspan="3" class="text-end">Tổng cộng</td><td>1.980k</td><td></td></tr></tfoot>
                                 </table>
                             </div>
                         </div>
@@ -691,24 +955,16 @@
                  <!-- Tickets -->
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                      <div class="card h-100 budget-card">
-                        <div class="card-header bg-success text-white"><i class="fas fa-ticket-alt me-2"></i>Vé Tham Quan - Bạn TT, Em gái check</div>
-                        <div class="card-body p-0">
+                        <div class="card-header"><i class="fas fa-ticket-alt me-2" style="color:#2ecc71;"></i>Vé Tham Quan - Bạn TT, Em gái check</div>
+                        <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-hover mb-0">
-                                    <thead>
-                                        <tr><th>Địa điểm</th><th>Chi tiết</th><th>Thành tiền</th><th>TT</th></tr>
-                                    </thead>
+                                <table class="table table-hover mb-0">
+                                     <thead><tr><th>Địa điểm</th><th>Chi tiết</th><th>Thành tiền</th><th>TT</th></tr></thead>
                                     <tbody>
                                         <tr><td>Thủy Cung Times City</td><td>8NL+3TE(10,4,1)</td><td>1.480k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                         <tr><td>Khu vui chơi AEON</td><td>3 trẻ</td><td>300k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                     </tbody>
-                                     <tfoot>
-                                        <tr class="fw-bold">
-                                            <td colspan="2" class="text-end">Tổng cộng</td>
-                                            <td>1.780k</td>
-                                            <td></td>
-                                        </tr>
-                                    </tfoot>
+                                     <tfoot><tr><td colspan="2" class="text-end">Tổng cộng</td><td>1.780k</td><td></td></tr></tfoot>
                                 </table>
                              </div>
                         </div>
@@ -717,28 +973,20 @@
                  <!-- Food -->
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                      <div class="card h-100 budget-card">
-                        <div class="card-header bg-warning text-dark"><i class="fas fa-utensils me-2"></i>Ăn Uống - Mẹ vợ (sáng), Bạn TT (trưa/tối)</div>
-                        <div class="card-body p-0">
+                        <div class="card-header"><i class="fas fa-utensils me-2" style="color:#e74c3c;"></i>Ăn Uống - Mẹ vợ (sáng), Bạn TT (trưa/tối)</div>
+                        <div class="card-body">
                              <div class="table-responsive">
-                                <table class="table table-striped table-hover mb-0">
-                                    <thead>
-                                        <tr><th>Bữa ăn</th><th>Địa điểm</th><th>Thành tiền</th><th>TT</th></tr>
-                                    </thead>
+                                <table class="table table-hover mb-0">
+                                    <thead><tr><th>Bữa ăn</th><th>Địa điểm</th><th>Thành tiền</th><th>TT</th></tr></thead>
                                     <tbody>
-                                        <tr><td>Sáng 30/4</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
+                                        <tr><td>Sáng 30/4</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
                                         <tr><td>Trưa 30/4</td><td>Hoàng Yến</td><td>950k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                         <tr><td>Tối 30/4</td><td>Bumbu Desa</td><td>880k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
-                                        <tr><td>Sáng 1/5</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
+                                        <tr><td>Sáng 1/5</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
                                         <tr><td>Trưa 1/5</td><td>Quán Ăn Ngon</td><td>760k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                         <tr><td>Tối 1/5</td><td>Shabu-ya</td><td>880k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                     </tbody>
-                                    <tfoot>
-                                        <tr class="fw-bold">
-                                            <td colspan="2" class="text-end">Tổng cộng</td>
-                                            <td>3.910k</td>
-                                            <td></td>
-                                        </tr>
-                                    </tfoot>
+                                    <tfoot><tr><td colspan="2" class="text-end">Tổng cộng</td><td>3.910k</td><td></td></tr></tfoot>
                                 </table>
                             </div>
                         </div>
@@ -747,26 +995,18 @@
                  <!-- Others -->
                  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                      <div class="card h-100 budget-card">
-                         <div class="card-header bg-info text-dark"><i class="fas fa-shopping-basket me-2"></i>Chi Phí Khác - Bạn TT</div>
-                         <div class="card-body p-0">
+                         <div class="card-header"><i class="fas fa-receipt me-2" style="color:#9b59b6;"></i>Chi Phí Khác - Bạn TT</div>
+                         <div class="card-body">
                              <div class="table-responsive">
-                                <table class="table table-striped table-hover mb-0">
-                                    <thead>
-                                        <tr><th>Mục</th><th>Thành tiền</th><th>TT</th></tr>
-                                    </thead>
+                                <table class="table table-hover mb-0">
+                                     <thead><tr><th>Mục</th><th>Thành tiền</th><th>TT</th></tr></thead>
                                     <tbody>
-                                        <tr><td>Đồ uống (30/4)</td><td>330k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
-                                        <tr><td>Đồ uống (1/5)</td><td>330k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
+                                        <tr><td>Đồ uống (30/4)</td><td>330k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Đồ uống (1/5)</td><td>330k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
                                         <tr><td>Mua sắm/Quà</td><td>400k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
-                                        <tr><td>Dự phòng</td><td>150k</td><td><span class="badge bg-info text-dark">Tiền mặt</span></td></tr>
+                                        <tr><td>Dự phòng</td><td>150k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
                                     </tbody>
-                                     <tfoot>
-                                        <tr class="fw-bold">
-                                            <td class="text-end">Tổng cộng</td>
-                                            <td>1.210k</td>
-                                            <td></td>
-                                        </tr>
-                                    </tfoot>
+                                     <tfoot><tr><td class="text-end">Tổng cộng</td><td>1.210k</td><td></td></tr></tfoot>
                                 </table>
                             </div>
                          </div>
@@ -774,14 +1014,12 @@
                 </div>
                 <!-- Summary -->
                  <div class="col-12" data-aos="fade-up" data-aos-delay="400">
-                     <div class="card budget-summary-card border-2 border-primary"> {/* Thêm border dày hơn */}
-                        <div class="card-header bg-primary bg-gradient text-white fw-bold fs-5"><i class="fas fa-calculator me-2"></i>Tổng Kết Ngân Sách - Bạn quản lý</div>
-                        <div class="card-body p-0"> {/* Bỏ padding card-body */}
+                     <div class="card budget-summary-card">
+                        <div class="card-header bg-primary bg-gradient text-white fw-bold fs-5"><i class="fas fa-chart-pie me-2"></i>Tổng Kết Ngân Sách</div>
+                        <div class="card-body p-0">
                             <div class="table-responsive">
-                                <table class="table table-bordered text-center mb-0"> {/* Bỏ margin bottom table */}
-                                    <thead class="table-light">
-                                        <tr><th>Hạng mục</th><th>Tổng chi phí</th><th><i class="fas fa-wallet text-info"></i> Tiền mặt</th><th><i class="far fa-credit-card text-danger"></i> Thẻ tín dụng</th></tr>
-                                    </thead>
+                                <table class="table table-bordered text-center mb-0">
+                                    <thead><tr><th>Hạng mục</th><th>Tổng chi phí</th><th><i class="fas fa-wallet"></i> Tiền mặt</th><th><i class="far fa-credit-card"></i> Thẻ</th></tr></thead>
                                     <tbody>
                                         <tr><td>Di chuyển</td><td>1.980k</td><td>1.980k</td><td>0đ</td></tr>
                                         <tr><td>Vé tham quan</td><td>1.780k</td><td>0đ</td><td>1.780k</td></tr>
@@ -789,7 +1027,7 @@
                                         <tr><td>Chi phí khác</td><td>1.210k</td><td>810k</td><td>400k</td></tr>
                                     </tbody>
                                     <tfoot>
-                                        <tr class="table-primary fw-bold">
+                                        <tr class="table-light"> {/* Nền nhạt cho tổng */}
                                             <td>TỔNG CỘNG</td>
                                             <td>6.880.000 đ</td>
                                             <td>3.230.000 đ</td>
@@ -798,8 +1036,8 @@
                                     </tfoot>
                                 </table>
                             </div>
-                             <div class="alert alert-warning rounded-0 rounded-bottom mb-0 p-3" role="alert"> {/* Thêm class cho alert */}
-                                <i class="fas fa-exclamation-triangle me-2"></i> <strong>Lưu ý:</strong> Tổng chi tiền mặt (~3.23M) > Ngân sách tiền mặt (2M). Cần điều chỉnh thanh toán một số khoản bằng thẻ tín dụng thay vì tiền mặt.
+                             <div class="alert alert-warning p-3 mb-0" role="alert">
+                                <i class="fas fa-exclamation-circle me-2"></i> <strong>Lưu ý quan trọng:</strong> Tổng chi tiền mặt (~3.23M) vượt quá ngân sách tiền mặt (2M). Cần ưu tiên dùng thẻ cho một số khoản hoặc chuẩn bị thêm tiền mặt.
                             </div>
                         </div>
                     </div>
@@ -809,142 +1047,142 @@
     </section>
 
     <!-- Packing List Section -->
-    <section id="packing" class="py-5">
+    <section id="packing">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-suitcase-rolling"></i> Danh Mục Cần Chuẩn Bị</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-tasks"></i> Danh Mục Chuẩn Bị</h2>
             <div class="accordion" id="packingAccordion">
-                <!-- Technology -->
+                 <!-- Technology -->
                 <div class="accordion-item" data-aos="fade-up">
-                    <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> {/* Start collapsed */}
-                       <i class="fas fa-laptop-code text-info"></i> Công Nghệ & Tài Liệu (Em gái)
+                    <h2 class="accordion-header" id="headingOneAcc">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneAcc" aria-expanded="false" aria-controls="collapseOneAcc">
+                       <i class="fas fa-laptop-code"></i> Công Nghệ & Tài Liệu (Em gái)
                     </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#packingAccordion">
+                    <div id="collapseOneAcc" class="accordion-collapse collapse" aria-labelledby="headingOneAcc" data-bs-parent="#packingAccordion">
                     <div class="accordion-body">
                        <ul class="list-group list-group-flush">
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Bản in kế hoạch (2 bản)</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Danh sách SĐT quan trọng</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Bản đồ HN offline</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Sạc dự phòng & cáp</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Máy ảnh/Điện thoại</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Bản in kế hoạch (2 bản)</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Danh sách SĐT quan trọng</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Bản đồ HN offline</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Sạc dự phòng & cáp</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Máy ảnh/Điện thoại</label></li>
                        </ul>
                     </div>
                     </div>
                 </div>
                  <!-- Personal Items -->
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="50">
-                    <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                       <i class="fas fa-user-tag text-primary"></i> Đồ Dùng Cá Nhân (Vợ)
+                    <h2 class="accordion-header" id="headingTwoAcc">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoAcc" aria-expanded="false" aria-controls="collapseTwoAcc">
+                       <i class="fas fa-user-tag"></i> Đồ Dùng Cá Nhân (Vợ)
                     </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#packingAccordion">
-                    <div class="accordion-body">
+                    <div id="collapseTwoAcc" class="accordion-collapse collapse" aria-labelledby="headingTwoAcc" data-bs-parent="#packingAccordion">
+                     <div class="accordion-body">
                         <ul class="list-group list-group-flush">
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Bình nước cá nhân</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Kem chống nắng SPF 50+</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Mũ/nón, kính râm</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Quạt mini</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Khẩu trang dự phòng</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Khăn ướt, khăn giấy</label></li>
-                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Đồ ăn nhẹ, bánh kẹo</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Bình nước cá nhân</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Kem chống nắng SPF 50+</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Mũ/nón, kính râm</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Quạt mini</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Khẩu trang dự phòng</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Khăn ướt, khăn giấy</label></li>
+                           <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Đồ ăn nhẹ, bánh kẹo</label></li>
                        </ul>
                     </div>
                     </div>
                 </div>
-                <!-- Elderly & Dad -->
+                 <!-- Elderly & Dad -->
                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                     <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                       <i class="fas fa-user-tie text-warning"></i> <i class="fas fa-briefcase-medical text-warning ms-1"></i> Cho Người Lớn Tuổi & Bố Vợ (Bạn hỗ trợ)
+                     <h2 class="accordion-header" id="headingThreeAcc">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeAcc" aria-expanded="false" aria-controls="collapseThreeAcc">
+                       <i class="fas fa-user-plus"></i> Cho Người Lớn Tuổi & Bố Vợ (Bạn hỗ trợ)
                     </button>
                     </h2>
-                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#packingAccordion">
+                     <div id="collapseThreeAcc" class="accordion-collapse collapse" aria-labelledby="headingThreeAcc" data-bs-parent="#packingAccordion">
                          <div class="accordion-body">
                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Đai lưng hỗ trợ</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Thuốc giảm đau</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Ghế gấp mini (nếu có)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Gậy chống (nếu cần)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Giày đi bộ êm ái</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Đai lưng hỗ trợ</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Thuốc giảm đau</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Ghế gấp mini (nếu có)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Gậy chống (nếu cần)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Giày đi bộ êm ái</label></li>
                             </ul>
                          </div>
                     </div>
                 </div>
                 <!-- Pregnant Wife -->
                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
-                     <h2 class="accordion-header" id="headingFour">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <i class="fas fa-female text-danger"></i> <i class="fas fa-baby-carriage text-danger ms-1"></i> Cho Bà Bầu (Vợ tự chuẩn bị)
+                     <h2 class="accordion-header" id="headingFourAcc">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourAcc" aria-expanded="false" aria-controls="collapseFourAcc">
+                        <i class="fas fa-baby-carriage"></i> Cho Bà Bầu (Vợ tự chuẩn bị)
                      </button>
                      </h2>
-                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#packingAccordion">
+                     <div id="collapseFourAcc" class="accordion-collapse collapse" aria-labelledby="headingFourAcc" data-bs-parent="#packingAccordion">
                          <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Giày đi bộ thoải mái</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Tất nén (nếu cần)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Đồ ăn nhẹ riêng</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Áo khoác nhẹ</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Thuốc cá nhân</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Giày đi bộ thoải mái</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Tất nén (nếu cần)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Đồ ăn nhẹ riêng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Áo khoác nhẹ</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Thuốc cá nhân</label></li>
                            </ul>
                          </div>
                     </div>
                 </div>
                 <!-- Children -->
                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                     <h2 class="accordion-header" id="headingFive">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                       <i class="fas fa-child text-success"></i> Cho Trẻ Em (Mẹ vợ)
+                     <h2 class="accordion-header" id="headingFiveAcc">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveAcc" aria-expanded="false" aria-controls="collapseFiveAcc">
+                       <i class="fas fa-child-reaching"></i> Cho Trẻ Em (Mẹ vợ)
                      </button>
                      </h2>
-                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#packingAccordion">
+                     <div id="collapseFiveAcc" class="accordion-collapse collapse" aria-labelledby="headingFiveAcc" data-bs-parent="#packingAccordion">
                          <div class="accordion-body">
                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Đồ ăn dặm bé 1t (4 bữa)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Bình, thìa, khăn ăn cho bé</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Tã, khăn ướt, túi đựng tã bẩn</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Đồ chơi nhỏ gọn</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Quần áo thay (1-2 bộ)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Mũ rộng vành che nắng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Đồ ăn dặm bé 1t (4 bữa)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Bình, thìa, khăn ăn cho bé</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Tã, khăn ướt, túi đựng tã bẩn</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Đồ chơi nhỏ gọn</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Quần áo thay (1-2 bộ)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Mũ rộng vành che nắng</label></li>
                             </ul>
                          </div>
                      </div>
                 </div>
                 <!-- Medical -->
                  <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
-                    <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                       <i class="fas fa-pills text-danger"></i> Thuốc Và Y Tế (Vợ)
+                    <h2 class="accordion-header" id="headingSixAcc">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixAcc" aria-expanded="false" aria-controls="collapseSixAcc">
+                       <i class="fas fa-pills"></i> Thuốc Và Y Tế (Vợ)
                     </button>
                     </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#packingAccordion">
+                    <div id="collapseSixAcc" class="accordion-collapse collapse" aria-labelledby="headingSixAcc" data-bs-parent="#packingAccordion">
                          <div class="accordion-body">
                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Túi sơ cứu cơ bản</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Thuốc hạ sốt, đau bụng</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Thuốc chống say xe</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Băng cá nhân, cồn sát trùng</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Thuốc chống côn trùng</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Men tiêu hóa</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Túi sơ cứu cơ bản</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Thuốc hạ sốt, đau bụng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Thuốc chống say xe</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Băng cá nhân, cồn sát trùng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Thuốc chống côn trùng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Men tiêu hóa</label></li>
                            </ul>
                          </div>
                      </div>
                 </div>
                  <!-- Weather Prep -->
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                    <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                       <i class="fas fa-cloud-sun-rain text-secondary"></i> Dự Phòng Thời Tiết (Em gái check, Vợ chuẩn bị)
+                    <h2 class="accordion-header" id="headingSevenAcc">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSevenAcc" aria-expanded="false" aria-controls="collapseSevenAcc">
+                       <i class="fas fa-cloud-sun-rain"></i> Dự Phòng Thời Tiết (Em gái check, Vợ chuẩn bị)
                     </button>
                     </h2>
-                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#packingAccordion">
+                    <div id="collapseSevenAcc" class="accordion-collapse collapse" aria-labelledby="headingSevenAcc" data-bs-parent="#packingAccordion">
                          <div class="accordion-body">
                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Áo mưa/dù (2-3 chiếc)</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Áo khoác nhẹ</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Kem chống nắng dự phòng</label></li>
-                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox" value=""> Mũ rộng vành</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Áo mưa/dù (2-3 chiếc)</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Áo khoác nhẹ</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Kem chống nắng dự phòng</label></li>
+                                <li class="list-group-item"><label class="form-check-label w-100"><input class="form-check-input me-2" type="checkbox"> Mũ rộng vành</label></li>
                            </ul>
                          </div>
                     </div>
@@ -954,52 +1192,57 @@
     </section>
 
     <!-- Contingency Plan Section -->
-    <section id="contingency" class="py-5 section-bg">
+    <section id="contingency" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-exclamation-triangle text-danger"></i> Phương Án Dự Phòng & Y Tế</h2> {/* Gộp tiêu đề */}
-            <div class="row g-4">
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-shield-alt"></i> Phương Án Dự Phòng & Y Tế</h2>
+            <div class="row g-4 g-lg-5">
                 <!-- Weather Backup -->
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="card h-100 border-warning">
                          <div class="card-header bg-warning text-dark"><i class="fas fa-cloud-showers-heavy me-2"></i>Dự Phòng Thời Tiết Xấu (Em gái theo dõi)</div>
                          <div class="card-body">
-                             <h6 class="card-subtitle mb-2 fw-bold"><i class="fas fa-cloud-rain text-muted me-1"></i>Nếu Trời Mưa Nhỏ</h6>
-                             <p class="text-muted small">Chuẩn bị áo mưa/ô. Tập trung điểm trong nhà. Tăng thời gian Thủy Cung, TTTM.</p>
+                             <h6 class="mb-2 fw-bold"><i class="fas fa-cloud-rain me-1"></i>Nếu Trời Mưa Nhỏ</h6>
+                             <p>Chuẩn bị áo mưa/ô. Ưu tiên điểm trong nhà (Thủy Cung, TTTM).</p>
                              <hr>
-                             <h6 class="card-subtitle mb-2 fw-bold"><i class="fas fa-poo-storm text-primary me-1"></i>Nếu Trời Mưa To</h6>
-                             <p class="text-muted small mb-1"><strong>Ngày 30/4:</strong> Vẫn đi Thủy Cung & TTTM Times City (thêm VinKE/Royal City nếu cần).</p>
-                             <p class="text-muted small"><strong>Ngày 1/5:</strong> Sáng thay Hồ Gươm bằng Bảo tàng Dân tộc học. Chiều AEON giữ nguyên.</p>
+                             <h6 class="mb-2 fw-bold"><i class="fas fa-poo-storm me-1"></i>Nếu Trời Mưa To</h6>
+                             <p class="mb-1"><strong>Ngày 30/4:</strong> Vẫn đi Thủy Cung & TTTM Times City (có thể thêm VinKE/Royal City).</p>
+                             <p><strong>Ngày 1/5:</strong> Sáng thay Hồ Gươm bằng Bảo tàng Dân tộc học. Chiều AEON giữ nguyên.</p>
                              <hr>
-                              <h6 class="card-subtitle mb-2 fw-bold"><i class="fas fa-sun text-warning me-1"></i>Nếu Nắng Nóng</h6>
-                             <p class="text-muted small">Tham quan sớm/muộn. Thêm điểm dừng máy lạnh. Chuẩn bị mũ, quạt, nước.</p>
+                              <h6 class="mb-2 fw-bold"><i class="fas fa-sun me-1"></i>Nếu Nắng Nóng</h6>
+                             <p>Tham quan sớm/muộn. Tìm điểm nghỉ máy lạnh. Chuẩn bị đủ mũ, quạt, nước.</p>
                          </div>
                     </div>
                 </div>
                 <!-- Medical Info -->
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="card h-100 border-danger">
-                        <div class="card-header bg-danger text-white"><i class="fas fa-hospital-alt me-2"></i>Thông Tin Y Tế Khẩn Cấp (Em gái lưu)</div>
+                        <div class="card-header bg-danger text-white"><i class="fas fa-first-aid me-2"></i>Thông Tin Y Tế Khẩn Cấp (Em gái lưu)</div>
                         <div class="card-body">
-                             <h6 class="card-subtitle mb-3 fw-bold"><i class="fas fa-ambulance text-white me-1"></i> Liên Hệ Khẩn Cấp</h6>
+                             <h6 class="mb-3 fw-bold"><i class="fas fa-phone-volume text-danger me-1"></i> Liên Hệ Khẩn Cấp</h6>
                              <ul class="list-unstyled">
-                                <li class="mb-2"><strong class="text-danger fs-5 me-2">115</strong> Cấp cứu toàn quốc</li>
-                                <li class="mb-2"><i class="fas fa-phone-alt text-danger me-2"></i><a href="tel:02435736666" class="text-decoration-none text-dark">024 3573 6666</a> (Cấp cứu tư nhân Vinmec)</li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <strong class="text-danger fs-4 me-3">115</strong> <span>Cấp cứu toàn quốc</span>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="fas fa-ambulance text-danger me-3 fs-5"></i>
+                                    <span><a href="tel:02435736666">024 3573 6666</a> (Cấp cứu tư nhân Vinmec)</span>
+                                </li>
                              </ul>
                              <hr>
-                             <h6 class="card-subtitle my-3 fw-bold"><i class="fas fa-map-marked-alt text-danger me-1"></i> Cơ Sở Y Tế Gần Điểm Đến</h6>
-                            <ul class="list-unstyled small">
-                                <li class="mb-2">
+                             <h6 class="my-3 fw-bold"><i class="fas fa-map-marked-alt text-danger me-1"></i> Cơ Sở Y Tế Gần Điểm Đến</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
                                     <strong>Gần Times City:</strong><br>
-                                    <i class="fas fa-clinic-medical text-primary me-1"></i> Bệnh viện Vinmec (458 Minh Khai, 📞 <a href="tel:02439743556" class="text-decoration-none text-dark">024 3974 3556</a>, 24/7)
+                                    <i class="fas fa-clinic-medical me-1"></i> Bệnh viện Vinmec (458 Minh Khai, 📞 <a href="tel:02439743556">024 3974 3556</a>, 24/7)
                                 </li>
-                                <li class="mb-2">
+                                <li class="mb-3">
                                     <strong>Gần Hồ Hoàn Kiếm:</strong><br>
-                                    <i class="fas fa-hospital text-success me-1"></i> BV Việt Đức (40 Tràng Thi, 📞 <a href="tel:02438253531" class="text-decoration-none text-dark">024 3825 3531</a>)<br>
-                                    <i class="fas fa-user-md text-info me-1"></i> PK SOS (52 Nguyễn Du, 📞 <a href="tel:02438220333" class="text-decoration-none text-dark">024 3822 0333</a>, 24/7)
+                                    <i class="fas fa-hospital me-1"></i> BV Việt Đức (40 Tràng Thi, 📞 <a href="tel:02438253531">024 3825 3531</a>)<br>
+                                    <i class="fas fa-user-md me-1"></i> PK SOS (52 Nguyễn Du, 📞 <a href="tel:02438220333">024 3822 0333</a>, 24/7)
                                 </li>
                                 <li>
                                     <strong>Gần AEON Long Biên:</strong><br>
-                                    <i class="fas fa-hospital-user text-warning me-1"></i> BV Đức Giang (Trường Lâm, 📞 <a href="tel:02438275751" class="text-decoration-none text-dark">024 3827 5751</a>)
+                                    <i class="fas fa-hospital-user me-1"></i> BV Đức Giang (Trường Lâm, 📞 <a href="tel:02438275751">024 3827 5751</a>)
                                 </li>
                              </ul>
                         </div>
@@ -1010,10 +1253,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white-50 text-center"> {/* Dùng text-white-50 cho chữ mờ hơn */}
+    <footer class="py-5 bg-dark text-white-50 text-center">
         <div class="container">
-            <p class="mb-1">Chúc gia đình có một chuyến đi vui vẻ và đáng nhớ tại Hà Nội!</p>
-            <small>© 2024 - Kế hoạch được tạo với sự trợ giúp của AI</small>
+            <p>Chúc gia đình có một kỳ nghỉ lễ 30/4 - 1/5 thật vui vẻ và ý nghĩa tại Hà Nội!</p>
+            <small>© 2024 - Lên kế hoạch cùng gia đình</small>
         </div>
     </footer>
 
@@ -1027,9 +1270,9 @@
         // Initialize AOS (Animate On Scroll)
         AOS.init({
             duration: 800, // Animation duration
-            once: false,    // Cho phép lặp lại animation khi cuộn lên/xuống
-            offset: 80,   // Tăng offset một chút
-            easing: 'ease-in-out-cubic' // Hiệu ứng mượt hơn
+            once: false,    // Repeat animation on scroll up/down
+            offset: 100,   // Trigger slightly later
+            easing: 'ease-out-cubic' // Smoother easing
         });
 
         // Activate Bootstrap tooltips
@@ -1039,20 +1282,33 @@
         // Activate Bootstrap ScrollSpy
          const scrollSpy = new bootstrap.ScrollSpy(document.body, {
             target: '#navbarNav',
-            offset: 70 // Bằng với padding-top của body + thêm một chút
-        })
+            offset: 100 // Adjust offset to match padding-top + navbar height effect
+        });
 
-        // Optional: Close mobile navbar after clicking a link
-         const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)'); // Thêm not dropdown nếu có
+        // Close mobile navbar after clicking a link
+         const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
          const menuToggle = document.getElementById('navbarNav');
-         const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false}); // Khởi tạo collapse instance
-         navLinks.forEach((l) => {
-             l.addEventListener('click', () => {
-                // Kiểm tra xem navbar có đang mở trên màn hình nhỏ không
-                if (menuToggle.classList.contains('show')) {
-                     bsCollapse.toggle(); // Đóng navbar
-                 }
+         if (menuToggle) { // Check if menuToggle exists
+             const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
+             navLinks.forEach((l) => {
+                 l.addEventListener('click', () => {
+                    if (menuToggle.classList.contains('show')) {
+                         bsCollapse.hide(); // Use hide() method
+                     }
+                 });
              });
+         }
+
+         // Optional: Change navbar style on scroll
+         window.addEventListener('scroll', function() {
+             const navbar = document.querySelector('.navbar');
+             if (window.scrollY > 50) {
+                 // Optional: Add styles for scrolled navbar if needed
+                 // e.g., navbar.classList.add('navbar-scrolled');
+             } else {
+                  // Optional: Remove styles for scrolled navbar if needed
+                 // e.g., navbar.classList.remove('navbar-scrolled');
+             }
          });
 
     </script>

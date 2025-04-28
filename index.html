@@ -10,8 +10,270 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- === EMBEDDED CUSTOM CSS START === -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            padding-top: 56px; /* Height of fixed navbar */
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #0dcaf0 !important; /* Bootstrap info color */
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 60vh;
+            /* !!! Quan trọng: Thay đổi URL ảnh nền nếu cần */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1589949080001-3849e416c0a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-weight: 700;
+            color: #343a40; /* Dark gray */
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #0d6efd; /* Bootstrap primary color */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Section Background */
+        .section-bg {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        /* Info Card */
+        .info-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: #0d6efd;
+        }
+        .info-card .fa-user-tie { color: #6f42c1; } /* Bootstrap purple */
+        .info-card .fa-user { color: #198754; } /* Bootstrap success */
+        .info-card .fa-child { color: #ffc107; } /* Bootstrap warning */
+        .info-card .fa-wallet { color: #0dcaf0; } /* Bootstrap info */
+        .info-card .fa-credit-card { color: #dc3545; } /* Bootstrap danger */
+        .info-card .fa-map-marker-alt { color: #0d6efd; } /* Bootstrap primary */
+
+        /* Personnel Card */
+        .personnel-card {
+            border: 1px solid #dee2e6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .personnel-card:hover {
+             transform: scale(1.03);
+             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 30px 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #dee2e6; /* Light gray */
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Icon position */
+        .timeline-icon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            color: white;
+        }
+
+        .timeline-icon i {
+            font-size: 1.5rem;
+        }
+
+        /* Content position */
+        .timeline-content {
+            position: relative;
+            width: 45%;
+            padding: 20px 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            float: left;
+        }
+        .timeline-item.alt .timeline-content {
+            float: right;
+        }
+
+        /* Arrows */
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid #fff;
+        }
+        .timeline-item.alt .timeline-content::before {
+            right: auto;
+            left: -15px;
+            border-left: none;
+            border-right: 15px solid #fff;
+        }
+
+        /* Adjust for small screens */
+        @media (max-width: 767px) {
+            .timeline::before {
+                left: 25px;
+            }
+            .timeline-icon {
+                left: 25px;
+            }
+            .timeline-content {
+                width: calc(100% - 70px); /* Adjusted width */
+                float: right; /* All items align to the right */
+                padding: 15px 20px;
+            }
+             .timeline-item.alt .timeline-content {
+                float: right; /* Ensure alt items also float right */
+            }
+            .timeline-content::before {
+                right: auto;
+                left: -15px;
+                border-left: none;
+                border-right: 15px solid #fff;
+            }
+             .timeline-item.alt .timeline-content::before {
+                right: auto;
+                left: -15px;
+                border-left: none;
+                border-right: 15px solid #fff; /* Ensure arrow points left */
+            }
+        }
+
+        /* Budget Card */
+        .budget-card .card-header {
+            font-weight: 500;
+        }
+        .budget-card table tfoot td {
+            font-weight: bold;
+        }
+        .budget-card .badge {
+            font-size: 0.8em;
+        }
+        .budget-summary-card table td, .budget-summary-card table th {
+            vertical-align: middle;
+        }
+
+        /* Packing List Accordion */
+        .accordion-button:not(.collapsed) {
+            color: #0c63e4;
+            background-color: #e7f1ff;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+        .accordion-item {
+            margin-bottom: 10px;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: 0.375rem; /* Match Bootstrap's default */
+        }
+        .accordion-item:first-of-type {
+            border-top-left-radius: 0.375rem;
+            border-top-right-radius: 0.375rem;
+        }
+        .accordion-item:last-of-type {
+            border-bottom-left-radius: 0.375rem;
+            border-bottom-right-radius: 0.375rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+        }
+    </style>
+    <!-- === EMBEDDED CUSTOM CSS END === -->
+
 </head>
 <body>
 
@@ -627,7 +889,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+
+    <!-- === EMBEDDED CUSTOM JS START === -->
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true,    // Whether animation should happen only once - while scrolling down
+            offset: 50,   // Offset (in px) from the original trigger point
+        });
+
+        // Optional: Add smooth scrolling for internal links (if not handled by CSS scroll-behavior)
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         const targetId = this.getAttribute('href');
+        //         const targetElement = document.querySelector(targetId);
+        //         if (targetElement) {
+        //             // Calculate offset for fixed navbar
+        //             const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        //             const elementPosition = targetElement.getBoundingClientRect().top;
+        //             const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+        //             window.scrollTo({
+        //                 top: offsetPosition,
+        //                 behavior: "smooth"
+        //             });
+
+        //             // Optional: Close mobile navbar after clicking a link
+        //             const navbarToggler = document.querySelector('.navbar-toggler');
+        //             const navbarCollapse = document.querySelector('.navbar-collapse');
+        //             if (navbarToggler && navbarCollapse.classList.contains('show')) {
+        //                  bootstrap.Collapse.getInstance(navbarCollapse).hide();
+        //                 // Or use: navbarToggler.click();
+        //             }
+        //         }
+        //     });
+        // });
+
+        // Optional: Change navbar background on scroll
+        // window.addEventListener('scroll', function() {
+        //     const navbar = document.querySelector('.navbar');
+        //     if (window.scrollY > 50) {
+        //         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Darker background
+        //     } else {
+        //         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Original background
+        //     }
+        // });
+
+
+        // Activate Bootstrap tooltips (if you add any)
+        // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
+    <!-- === EMBEDDED CUSTOM JS END === -->
+
 </body>
 </html>

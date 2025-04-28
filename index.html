@@ -1,0 +1,49 @@
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 800, // Animation duration
+    once: true,    // Whether animation should happen only once - while scrolling down
+    offset: 50,   // Offset (in px) from the original trigger point
+});
+
+// Optional: Add smooth scrolling for internal links (if not handled by CSS scroll-behavior)
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         const targetId = this.getAttribute('href');
+//         const targetElement = document.querySelector(targetId);
+//         if (targetElement) {
+//             // Calculate offset for fixed navbar
+//             const navbarHeight = document.querySelector('.navbar').offsetHeight;
+//             const elementPosition = targetElement.getBoundingClientRect().top;
+//             const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+//             window.scrollTo({
+//                 top: offsetPosition,
+//                 behavior: "smooth"
+//             });
+
+//             // Optional: Close mobile navbar after clicking a link
+//             const navbarToggler = document.querySelector('.navbar-toggler');
+//             const navbarCollapse = document.querySelector('.navbar-collapse');
+//             if (navbarToggler && navbarCollapse.classList.contains('show')) {
+//                  bootstrap.Collapse.getInstance(navbarCollapse).hide();
+//                 // Or use: navbarToggler.click();
+//             }
+//         }
+//     });
+// });
+
+// Optional: Change navbar background on scroll
+// window.addEventListener('scroll', function() {
+//     const navbar = document.querySelector('.navbar');
+//     if (window.scrollY > 50) {
+//         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Darker background
+//     } else {
+//         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Original background
+//     }
+// });
+
+
+// Activate Bootstrap tooltips (if you add any)
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

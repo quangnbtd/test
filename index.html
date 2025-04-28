@@ -3,683 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kế Hoạch Du Lịch Hà Nội 30/4 - 1/5/2025 (Hiện đại)</title>
+    <title>Kế Hoạch Du Lịch Hà Nội 2025 (Future Trends)</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Nunito Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
 
-    <!-- === EMBEDDED CUSTOM CSS - MODERN STYLE === -->
+    <!-- === EMBEDDED CUSTOM CSS - 2025 TRENDS STYLE === -->
     <style>
         :root {
-            /* --- Color Palette --- */
-            --primary-color: #4a90e2; /* Xanh dương chính */
-            --secondary-color: #f5a623; /* Vàng cam nhấn */
-            --light-bg: #f9fbfd; /* Nền sáng rất nhạt */
+            /* --- Enhanced Color Palette --- */
+            --primary-hue: 210; /* Base Hue for Blues */
+            --secondary-hue: 35; /* Base Hue for Gold/Orange */
+            --primary-color: hsl(var(--primary-hue), 75%, 55%); /* Brighter primary blue */
+            --primary-light: hsl(var(--primary-hue), 80%, 96%); /* Very light blue bg */
+            --primary-dark: hsl(var(--primary-hue), 60%, 40%);
+            --secondary-color: hsl(var(--secondary-hue), 90%, 60%); /* Vibrant gold/orange */
+            --secondary-light: hsl(var(--secondary-hue), 95%, 95%);
+            --light-bg: #ffffff; /* White background */
             --white-color: #ffffff;
-            --dark-color: #333a45; /* Xám đậm cho chữ */
-            --grey-color: #6c757d; /* Xám cho chữ phụ */
-            --border-color: #e9ecef; /* Màu viền nhạt */
+            --dark-color: #242933; /* Darker grey for text */
+            --grey-color: #6a7384; /* Mid grey for secondary text */
+            --border-color: #eef2f7; /* Lighter border */
 
-            /* --- Typography --- */
-            --body-font: 'Poppins', sans-serif;
-            --base-font-size: 16px;
-            --line-height-base: 1.7;
+            /* --- Enhanced Typography --- */
+            --body-font: 'Nunito Sans', sans-serif;
+            --base-font-size: 17px; /* Slightly larger base size */
+            --line-height-base: 1.8; /* Increased line height */
+            --header-weight: 700;
+            --body-weight: 400;
+            --medium-weight: 500;
 
-            /* --- Spacing --- */
-            --section-padding: 5rem 0; /* Padding lớn hơn cho section */
+            /* --- Enhanced Spacing --- */
+            --section-padding: 6rem 0; /* More padding */
+            --card-padding: 2rem;
+            --element-gap: 2rem; /* Gap between elements */
 
-            /* --- Effects --- */
-            --box-shadow-light: 0 5px 20px rgba(0, 0, 0, 0.05);
-            --box-shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
-            --border-radius-base: 12px; /* Bo góc lớn hơn */
-            --transition-base: all 0.3s ease-in-out;
+            /* --- Enhanced Effects --- */
+            --box-shadow-subtle: 0 4px 15px rgba(100, 120, 150, 0.06); /* Softer, wider shadow */
+            --box-shadow-medium: 0 8px 30px rgba(100, 120, 150, 0.1);
+            --border-radius-large: 16px; /* Larger radius */
+            --border-radius-medium: 10px;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+        }
+
+        ::selection {
+             background-color: var(--primary-light);
+             color: var(--primary-dark);
         }
 
         body {
             font-family: var(--body-font);
             font-size: var(--base-font-size);
             color: var(--dark-color);
-            background-color: var(--white-color);
+            background-color: var(--light-bg);
             line-height: var(--line-height-base);
-            padding-top: 70px; /* Điều chỉnh theo chiều cao navbar */
+            padding-top: 80px; /* Adjusted for taller navbar */
             scroll-behavior: smooth;
+            font-weight: var(--body-weight);
+            -webkit-font-smoothing: antialiased;
+             -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
+            font-weight: var(--header-weight);
             color: var(--dark-color);
             line-height: 1.3;
+            margin-bottom: 1rem;
         }
 
-        h2 { font-size: 2.2rem; }
-        h4 { font-size: 1.5rem; }
-        h5 { font-size: 1.15rem; }
+        h2 { font-size: 2.5rem; } /* Larger section title */
+        h4 { font-size: 1.6rem; }
+        h5 { font-size: 1.2rem; font-weight: 600; }
 
         p {
             color: var(--grey-color);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem; /* More space after paragraphs */
+        }
+        p.lead {
+             font-size: 1.15rem;
+             font-weight: 400;
+             color: var(--dark-color);
         }
 
         a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: var(--transition-base);
+            transition: var(--transition-smooth);
         }
         a:hover {
-            color: darken(var(--primary-color), 10%);
+            color: var(--primary-dark);
             text-decoration: none;
         }
 
-        /* Navbar */
+        /* Navbar - Glassmorphism Enhanced */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.95); /* Nền trắng mờ */
-            backdrop-filter: blur(10px); /* Hiệu ứng blur */
-            box-shadow: var(--box-shadow-light);
-            padding-top: 0.8rem;
-            padding-bottom: 0.8rem;
-            transition: var(--transition-base);
-            height: 70px; /* Chiều cao cố định */
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly more transparent */
+            backdrop-filter: blur(15px) saturate(180%); /* Stronger blur */
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            box-shadow: 0 2px 10px rgba(100, 120, 150, 0.05); /* More subtle shadow */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border */
+            padding: 0.8rem 0;
+            transition: var(--transition-smooth);
+            height: 80px; /* Taller navbar */
         }
         .navbar-brand {
             font-weight: 700;
             color: var(--dark-color) !important;
-            font-size: 1.3rem;
+            font-size: 1.5rem; /* Larger brand */
+            letter-spacing: -0.5px;
         }
         .navbar-brand i {
             color: var(--primary-color);
-            margin-right: 8px;
+            margin-right: 10px;
+            font-size: 1.4rem;
         }
         .nav-link {
             color: var(--grey-color) !important;
-            font-weight: 500;
-            padding: 0.5rem 1rem !important;
-            margin: 0 0.2rem;
-            border-radius: var(--border-radius-base);
-            transition: var(--transition-base);
+            font-weight: var(--medium-weight);
+            padding: 0.6rem 1.2rem !important; /* More padding */
+            margin: 0 0.3rem;
+            border-radius: var(--border-radius-medium);
+            transition: var(--transition-smooth);
+            font-size: 0.95rem;
         }
         .nav-link:hover, .nav-link.active {
             color: var(--primary-color) !important;
-            background-color: rgba(74, 144, 226, 0.1); /* Nền xanh nhạt khi hover/active */
+            background-color: var(--primary-light);
         }
-        .navbar-toggler {
-            border: none;
-        }
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
+        .navbar-toggler { border: none; padding: 0.5rem; }
+        .navbar-toggler:focus { box-shadow: none; }
         .navbar-toggler-icon {
-             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51, 58, 69, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(36, 41, 51, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+             width: 1.8em; /* Larger icon */
+             height: 1.8em;
         }
 
-
-        /* Hero Section */
+        /* Hero Section - Enhanced Animation */
         .hero-section {
-            height: 70vh;
-            min-height: 500px;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1558005530-a7958896ec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxoYW5vaXxlbnwwfHx8fDE2ODI4MzcyNzc&ixlib=rb-4.0.3&q=80&w=1600') no-repeat center center; /* Ảnh khác */
+            height: 80vh; /* Taller hero */
+            min-height: 600px;
+            /* Image from Unsplash by Alex Azabache */
+            background: linear-gradient(rgba(30, 40, 50, 0.5), rgba(30, 40, 50, 0.5)), url('https://images.unsplash.com/photo-1562813733-b31f71025d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGFic3RyYWN0JTIwYmx1ZXxlbnwwfHx8fDE2ODMxMjk1NTc&ixlib=rb-4.0.3&q=80&w=1920') no-repeat center center;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white-color);
+            overflow: hidden;
         }
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .hero-content h1, .hero-content p {
             color: var(--white-color);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        .hero-section p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+        .hero-content h1 {
+            font-size: calc(2.5rem + 2vw); /* Responsive font size */
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+        .hero-content p {
+            font-size: calc(1rem + 0.5vw);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.3s forwards; /* Delayed */
+             opacity: 0;
+             font-weight: 300;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Section Title */
+
+        /* Section Title - More emphasis */
         .section-title {
             font-weight: 700;
             position: relative;
-            padding-bottom: 1.5rem; /* Tăng padding */
-            margin-bottom: 4rem; /* Tăng khoảng cách */
+            padding-bottom: 1rem; /* Reduced padding */
+            margin-bottom: 5rem; /* Increased margin */
+             max-width: 700px; /* Limit width for centering effect */
+             margin-left: auto;
+             margin-right: auto;
         }
         .section-title i {
+            display: block; /* Icon on top */
+            font-size: 2rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
-            margin-right: 12px;
         }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 80px; /* Dài hơn */
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Gradient */
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        /* Section Background */
-        .section-bg {
-            background-color: var(--light-bg);
-        }
-        section {
-             padding: var(--section-padding);
+        .section-title::after { display: none; } /* Remove underline */
+        .section-title + h4 { /* Style for subtitle below section title */
+            margin-top: -4rem; /* Pull subtitle up */
+            margin-bottom: 4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
         }
 
 
-        /* Info Card */
+        /* Section Background & Padding */
+        .section-bg { background-color: var(--primary-light); }
+        section { padding: var(--section-padding); }
+
+        /* Info Card - Minimal & Soft */
         .info-card {
             background-color: var(--white-color);
-            border: 1px solid var(--border-color); /* Viền rất nhạt */
-            box-shadow: var(--box-shadow-light);
-            transition: var(--transition-base);
-            border-radius: var(--border-radius-base);
-            overflow: hidden; /* Đảm bảo bo góc đúng */
+            border: none; /* Remove border */
+            box-shadow: var(--box-shadow-subtle);
+            transition: var(--transition-smooth);
+            border-radius: var(--border-radius-large);
             height: 100%;
+            overflow: visible; /* Allow icon to overlap */
         }
         .info-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px); /* More lift */
             box-shadow: var(--box-shadow-medium);
         }
         .icon-circle {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-color), lighten(var(--primary-color), 15%));
+            width: 65px; /* Slightly smaller */
+            height: 65px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: -35px auto 20px auto; /* Đẩy lên cao hơn */
+            margin: -32.5px auto 25px auto; /* Center overlap */
             color: var(--white-color);
-            box-shadow: 0 6px 15px rgba(74, 144, 226, 0.3);
+            box-shadow: 0 8px 20px hsla(var(--primary-hue), 75%, 55%, 0.3); /* Colored shadow */
+             z-index: 2;
+             position: relative;
         }
         .info-card .card-body {
-            padding: 2rem; /* Tăng padding */
+            padding: var(--card-padding);
+            padding-top: 2.5rem; /* More space below icon */
+            text-align: center;
         }
         .info-card .card-title {
-            margin-top: 0; /* Bỏ margin top */
-            font-weight: 600;
-            margin-bottom: 1rem;
+            margin-top: 0;
+            margin-bottom: 0.8rem;
         }
-        .info-card ul {
-            text-align: left;
-            margin-top: 1.5rem;
-        }
-        .info-card ul li {
-            margin-bottom: 0.5rem;
-            color: var(--grey-color);
-        }
+        .info-card p { font-size: 0.95rem; }
+        .info-card ul { text-align: left; margin-top: 1.5rem; padding-left: 0.5rem; list-style: none;}
+        .info-card ul li { margin-bottom: 0.6rem; color: var(--grey-color); display: flex; align-items: flex-start; }
         .info-card ul li i {
-           width: 25px;
-           text-align: center;
-           margin-right: 8px;
-           color: var(--primary-color);
+           width: 20px; text-align: center; margin-right: 10px; color: var(--primary-color); margin-top: 4px; flex-shrink: 0;
         }
-        .info-card .progress {
-            height: 8px; /* Thanh mảnh hơn */
-            border-radius: 4px;
-            overflow: hidden;
-            background-color: #e9ecef;
-        }
-        .info-card .progress-bar {
-             background-color: var(--primary-color);
-        }
-         .info-card .progress-bar.bg-info { background-color: #56ccf2; } /* Màu khác cho tiền mặt */
-         .info-card .progress-bar.bg-danger { background-color: var(--secondary-color); } /* Màu nhấn cho thẻ */
+        .info-card .progress { height: 6px; border-radius: 3px; background-color: var(--border-color); }
+        .info-card .progress-bar { background-color: var(--primary-color); }
+        .info-card .progress-bar.bg-info { background-color: #3dc2ff; }
+        .info-card .progress-bar.bg-danger { background-color: var(--secondary-color); }
 
-        /* Personnel Card */
+        /* Personnel Card - Minimal Gradient Icon */
         .personnel-card {
             background-color: var(--white-color);
             border: 1px solid var(--border-color);
-            box-shadow: var(--box-shadow-light);
-            transition: var(--transition-base);
-            border-radius: var(--border-radius-base);
+            box-shadow: none; /* Remove default shadow */
+            transition: var(--transition-smooth);
+            border-radius: var(--border-radius-large);
             text-align: center;
-            padding: 2rem 1.5rem;
-        }
-        .personnel-card:hover {
-             transform: translateY(-8px) scale(1.02);
-             box-shadow: var(--box-shadow-medium);
-             border-color: var(--primary-color);
-        }
-        .personnel-card i.fa-3x {
-            font-size: 2.8rem; /* Điều chỉnh size */
-            margin-bottom: 1.5rem !important;
-            display: inline-block;
-            /* Gradient color for icons */
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .personnel-card .card-title {
-             font-weight: 600;
-             margin-bottom: 0.5rem;
-        }
-        .personnel-card p {
-             font-size: 0.9rem;
-             color: var(--grey-color);
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            position: relative;
-            overflow-x: hidden;
-        }
-        .timeline {
-            position: relative;
-            padding: 40px 0;
-            list-style: none;
-            margin-top: 2rem;
-        }
-        .timeline::before { /* Đường line chính */
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 3px; /* Mảnh hơn */
-            background: var(--border-color);
-            left: 50%;
-            margin-left: -1.5px;
-            border-radius: 1.5px;
-        }
-        .timeline-item {
-            margin-bottom: 50px; /* Tăng khoảng cách */
-            position: relative;
-        }
-        .timeline-item::after {
-            content: ""; display: table; clear: both;
-        }
-        .timeline-icon { /* Điểm mốc */
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--white-color);
-            border: 3px solid var(--primary-color); /* Border màu chính */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            color: var(--primary-color); /* Icon màu chính */
-            box-shadow: 0 0 0 5px var(--white-color); /* Vòng trắng bao quanh */
-            transition: var(--transition-base);
-        }
-        .timeline-item:hover .timeline-icon {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            transform: translate(-50%, -50%) scale(1.1); /* Phóng to nhẹ khi hover */
-        }
-        .timeline-icon i {
-            font-size: 1.4rem;
-        }
-        .timeline-content {
-            position: relative;
-            width: 46%; /* Điều chỉnh nhẹ */
-            padding: 2rem;
-            background: var(--white-color);
-            border-radius: var(--border-radius-base);
-            box-shadow: var(--box-shadow-medium);
-            border: 1px solid var(--border-color);
-            float: left;
-            transition: var(--transition-base);
-        }
-         .timeline-item:hover .timeline-content {
-             border-color: var(--primary-color);
-         }
-        .timeline-item.alt .timeline-content {
-            float: right;
-        }
-        .timeline-content h5 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        .timeline-content ul {
-            margin-bottom: 0; padding-left: 0;
-        }
-        .timeline-content ul li {
-            margin-bottom: 0.6rem; line-height: 1.6; color: var(--grey-color); font-size: 0.95rem;
-        }
-         .timeline-content ul li strong { color: var(--dark-color); font-weight: 500;}
-         .timeline-content ul li i.fa-clock { color: var(--grey-color); margin-right: 8px; font-size: 0.9em; }
-          .timeline-content ul li i:not(.fa-clock) {
-              margin-right: 6px; width: 18px; text-align: center;
-              color: var(--secondary-color); /* Màu nhấn cho icon hoạt động */
-          }
-           .timeline-content ul li i.fas.fa-taxi { color: #f39c12; } /* Màu taxi */
-           .timeline-content ul li i.fas.fa-ticket-alt { color: #2ecc71; } /* Màu vé */
-           .timeline-content ul li i.fas.fa-utensils, .timeline-content ul li i.fas.fa-concierge-bell, .timeline-content ul li i.fas.fa-pepper-hot, .timeline-content ul li i.fas.fa-hotdog { color: #e74c3c; } /* Màu ăn uống */
-           .timeline-content ul li i.fas.fa-fish { color: #3498db; } /* Màu thủy cung */
-            .timeline-content ul li i.fas.fa-shopping-bag, .timeline-content ul li i.fas.fa-store, .timeline-content ul li i.fas.fa-shopping-cart { color: #9b59b6; } /* Màu mua sắm */
-            .timeline-content ul li i.fas.fa-home { color: var(--primary-color); } /* Màu về nhà */
-            .timeline-content ul li i.fas.fa-camera, .timeline-content ul li i.fas.fa-video, .timeline-content ul li i.fab.fa-google-drive, .timeline-content ul li i.fas.fa-images { color: #1abc9c;} /* Màu media */
-
-
-        /* Mũi tên Timeline */
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 28px;
-            right: -10px; /* Dịch gần hơn */
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid var(--border-color); /* Mũi tên màu viền */
-            transition: border-left-color 0.3s ease-in-out;
-        }
-         .timeline-item:hover .timeline-content::before {
-            border-left-color: var(--primary-color);
-         }
-        .timeline-content::after { /* Lớp phủ màu trắng che viền */
-             content: '';
-             position: absolute;
-             top: 29px;
-             right: -8px;
-             width: 0;
-             height: 0;
-             border-top: 9px solid transparent;
-             border-bottom: 9px solid transparent;
-             border-left: 9px solid var(--white-color);
-        }
-        .timeline-item.alt .timeline-content::before {
-            right: auto; left: -10px; border-left: none; border-right: 10px solid var(--border-color); transition: border-right-color 0.3s ease-in-out;
-        }
-         .timeline-item:hover .timeline-item.alt .timeline-content::before {
-             border-right-color: var(--primary-color);
-         }
-        .timeline-item.alt .timeline-content::after {
-             right: auto; left: -8px; border-left: none; border-right: 9px solid var(--white-color);
-        }
-
-        /* Responsive Timeline */
-        @media (max-width: 767px) {
-            .timeline::before { left: 25px; }
-            .timeline-icon { left: 25px; }
-            .timeline-content { width: calc(100% - 65px); float: right !important; }
-            .timeline-item.alt .timeline-content { float: right !important; }
-            .timeline-content::before, .timeline-item.alt .timeline-content::before {
-                right: auto; left: -10px; border-left: none; border-right: 10px solid var(--border-color);
-            }
-            .timeline-content::after, .timeline-item.alt .timeline-content::after {
-                 right: auto; left: -8px; border-left: none; border-right: 9px solid var(--white-color);
-            }
-        }
-
-        /* Budget Section */
-        .budget-card {
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius-base);
-            overflow: hidden; /* Quan trọng cho bo góc table */
-             box-shadow: var(--box-shadow-light);
-        }
-        .budget-card .card-header {
-            font-weight: 600;
-            background-color: var(--light-bg); /* Nền header nhạt */
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 1.5rem;
-        }
-         .budget-card .card-header i {
-            margin-right: 8px;
-         }
-        .budget-card .card-body {
-            padding: 0; /* Bỏ padding body để table sát viền */
-        }
-        .budget-card table { margin-bottom: 0; }
-        .budget-card table thead th {
-             background-color: var(--white-color); /* Header trắng */
-             font-weight: 500;
-             font-size: 0.9rem;
-             color: var(--grey-color);
-             border-bottom: 1px solid var(--border-color);
-             padding: 0.8rem 1rem;
-             white-space: nowrap;
-             text-transform: uppercase;
-             letter-spacing: 0.5px;
-        }
-        .budget-card table tbody td {
-            padding: 0.9rem 1rem;
-            vertical-align: middle;
-            font-size: 0.95rem;
-            border-top: 1px solid var(--border-color);
-        }
-        .budget-card table tbody tr:first-child td {
-            border-top: none; /* Bỏ border top dòng đầu */
-        }
-         /* Bỏ hiệu ứng strip */
-         .table-striped tbody tr:nth-of-type(odd) {
-             background-color: var(--white-color) !important;
-         }
-         .table-hover tbody tr:hover {
-              background-color: rgba(74, 144, 226, 0.05) !important; /* Hover xanh rất nhạt */
-         }
-        .budget-card table tfoot td {
-            font-weight: 600;
-            background-color: var(--light-bg);
-            padding: 1rem;
-            border-top: 2px solid var(--border-color); /* Đường ngăn cách dày hơn */
-        }
-        .budget-card .badge {
-            font-size: 0.8rem;
-            padding: 0.4em 0.8em;
-            border-radius: 20px; /* Badge hình viên thuốc */
-            font-weight: 500;
-        }
-         .badge.bg-info { background-color: #e0f7fa !important; color: #00796b !important; } /* Màu badge tiền mặt */
-         .badge.bg-danger { background-color: #fff3e0 !important; color: #ef6c00 !important; } /* Màu badge thẻ */
-
-        .budget-summary-card {
-            border-width: 1px; /* Border mỏng hơn */
-            border-color: var(--primary-color) !important;
-            border-radius: var(--border-radius-base);
-             box-shadow: var(--box-shadow-medium);
+            padding: 2.5rem 1.5rem; /* More padding */
+             position: relative;
              overflow: hidden;
         }
-        .budget-summary-card .card-header {
-            background: linear-gradient(90deg, var(--primary-color), lighten(var(--primary-color), 10%)); /* Gradient header */
-            font-size: 1.2rem !important;
-            padding: 1rem 1.5rem;
+        .personnel-card::before { /* Subtle gradient border on hover */
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: var(--border-radius-large);
+            padding: 2px; /* Border thickness */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
         }
-        .budget-summary-card table th, .budget-summary-card table td {
-            vertical-align: middle;
-            padding: 1rem;
+        .personnel-card:hover::before { opacity: 1; }
+        .personnel-card:hover {
+             transform: translateY(-8px);
+             box-shadow: var(--box-shadow-medium);
+             border-color: transparent; /* Hide base border on hover */
         }
-         .budget-summary-card table thead th {
-             background-color: var(--light-bg);
+        .personnel-card i.fa-3x {
+            font-size: 3rem; margin-bottom: 1.5rem !important; display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .personnel-card .card-title { font-weight: 600; margin-bottom: 0.3rem; }
+        .personnel-card p { font-size: 0.9rem; color: var(--grey-color); margin-bottom: 0; }
+
+        /* Timeline Section - Cleaned Up */
+        .timeline::before { /* Thinner, gradient line */
+            width: 2px; background: linear-gradient(to bottom, var(--primary-light), var(--primary-color), var(--primary-light)); left: 25px; margin-left: 0;
+        }
+        .timeline-icon { /* Simple Dot Marker */
+             left: 25px; /* Align with line */
+             transform: translate(-50%, -50%);
+             width: 18px; /* Smaller dot */
+             height: 18px;
+             background: var(--primary-light); /* Lighter background */
+             border: 3px solid var(--primary-color);
+             box-shadow: none; /* Remove outer shadow */
+             transition: var(--transition-smooth);
+             display: block; /* Remove flex for simple dot */
+        }
+         .timeline-icon i { display: none; } /* Hide icon inside dot */
+
+        .timeline-item:hover .timeline-icon {
+            background-color: var(--secondary-color); /* Highlight color */
+            border-color: var(--secondary-color);
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        .timeline-content {
+            width: calc(100% - 65px); /* Adjust width for left alignment */
+            float: none; /* Remove float */
+            margin-left: 55px; /* Space from line */
+            background: var(--white-color);
+            border-radius: var(--border-radius-medium);
+            box-shadow: var(--box-shadow-subtle);
+            border: 1px solid var(--border-color);
+            padding: 1.8rem; /* Adjust padding */
+        }
+         .timeline-item.alt .timeline-content { /* Keep consistent left alignment */
+             float: none;
+             margin-left: 55px;
+         }
+         .timeline-content::before, .timeline-content::after,
+         .timeline-item.alt .timeline-content::before, .timeline-item.alt .timeline-content::after {
+             display: none; /* Remove arrows */
+         }
+        .timeline-content h5 {
+             color: var(--dark-color); /* Darker heading */
+             margin-bottom: 0.8rem;
              font-weight: 600;
-             color: var(--dark-color);
-         }
-        .budget-summary-card table tfoot td {
-             font-size: 1.1rem;
-             font-weight: 700;
         }
-         .budget-summary-card .table-bordered {
-             border-color: var(--border-color);
-         }
-        .budget-summary-card .alert {
-            border-radius: 0 0 var(--border-radius-base) var(--border-radius-base) !important;
-            margin-bottom: 0 !important;
-            border: none;
-            background-color: #fff9e6; /* Nền vàng nhạt */
-            color: #8a6d3b; /* Chữ nâu vàng */
-            padding: 1rem 1.5rem;
-        }
-        .budget-summary-card .alert i {
-            color: #ffa000; /* Icon vàng */
+        .timeline-content ul li { font-size: 0.9rem; color: var(--grey-color); line-height: 1.7; }
+         .timeline-content ul li i.fa-clock { font-size: 0.85em; }
+         .timeline-content ul li i:not(.fa-clock) { width: 16px; font-size: 0.9em;} /* Smaller icons */
+         /* Keep icon colors defined previously */
+         .timeline-content ul li i.fas.fa-taxi { color: #f39c12; }
+         .timeline-content ul li i.fas.fa-ticket-alt { color: #2ecc71; }
+         .timeline-content ul li i.fas.fa-utensils, .timeline-content ul li i.fas.fa-concierge-bell, .timeline-content ul li i.fas.fa-pepper-hot, .timeline-content ul li i.fas.fa-hotdog { color: #e74c3c; }
+         .timeline-content ul li i.fas.fa-fish { color: #3498db; }
+         .timeline-content ul li i.fas.fa-shopping-bag, .timeline-content ul li i.fas.fa-store, .timeline-content ul li i.fas.fa-shopping-cart { color: #9b59b6; }
+         .timeline-content ul li i.fas.fa-home { color: var(--primary-color); }
+         .timeline-content ul li i.fas.fa-camera, .timeline-content ul li i.fas.fa-video, .timeline-content ul li i.fab.fa-google-drive, .timeline-content ul li i.fas.fa-images { color: #1abc9c;}
+
+        @media (min-width: 768px) { /* Restore two-column timeline on larger screens */
+            .timeline::before { left: 50%; margin-left: -1px;}
+            .timeline-icon { left: 50%;}
+            .timeline-content { width: 45%; margin-left: 0;} /* Reset margin */
+            .timeline-item:not(.alt) .timeline-content { float: left; margin-right: 5%;} /* Add margin for spacing */
+            .timeline-item.alt .timeline-content { float: right; margin-left: 5%; }
+             /* Restore arrows for desktop */
+            .timeline-content::before { display: block; right: -10px; left: auto; border-right: none; border-left: 10px solid var(--border-color); }
+            .timeline-content::after { display: block; right: -8px; left: auto; border-right: none; border-left: 9px solid var(--white-color); }
+            .timeline-item.alt .timeline-content::before { display: block; left: -10px; right: auto; border-left: none; border-right: 10px solid var(--border-color); }
+            .timeline-item.alt .timeline-content::after { display: block; left: -8px; right: auto; border-left: none; border-right: 9px solid var(--white-color); }
+            .timeline-item:hover .timeline-content::before { border-left-color: var(--primary-color); }
+            .timeline-item:hover .timeline-item.alt .timeline-content::before { border-right-color: var(--primary-color); }
         }
 
-        /* Packing List Accordion */
+
+        /* Budget Section - Minimal Tables */
+        .budget-card {
+            border-radius: var(--border-radius-medium); /* Slightly smaller radius for tables */
+            box-shadow: none; /* No shadow for individual cards */
+            border: 1px solid var(--border-color);
+            background-color: var(--white-color);
+        }
+        .budget-card .card-header {
+            background-color: transparent; /* Transparent header */
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+        }
+        .budget-card table thead th {
+             background-color: transparent;
+             font-weight: var(--medium-weight);
+             font-size: 0.85rem;
+             color: var(--grey-color);
+             padding: 0.8rem 1rem;
+             text-transform: uppercase;
+             letter-spacing: 0.8px;
+             border-bottom: 1px solid var(--border-color);
+        }
+        .budget-card table tbody td {
+            padding: 1rem; font-size: 0.95rem; border-top: 1px solid var(--border-color);
+        }
+        .budget-card table tfoot td {
+            font-weight: 600; background-color: var(--primary-light); padding: 1rem; border-top: 1px solid var(--border-color); color: var(--primary-dark);
+        }
+        .budget-card .badge {
+            font-size: 0.75rem; padding: 0.35em 0.8em; border-radius: var(--border-radius-medium); font-weight: var(--medium-weight);
+        }
+        .badge.bg-info { background-color: var(--primary-light) !important; color: var(--primary-dark) !important; }
+        .badge.bg-danger { background-color: var(--secondary-light) !important; color: var(--secondary-color) !important; font-weight: 600; }
+
+        .budget-summary-card {
+             border-radius: var(--border-radius-large);
+             border: none;
+             box-shadow: var(--box-shadow-medium);
+        }
+        .budget-summary-card .card-header {
+            border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
+        }
+         .budget-summary-card table { border: 1px solid var(--border-color); }
+         .budget-summary-card table thead th { background-color: var(--white-color); font-weight: 600; color: var(--dark-color); font-size: 1rem; border-color: var(--border-color); }
+         .budget-summary-card table tbody td { font-size: 1rem; }
+         .budget-summary-card table tfoot td { font-size: 1.1rem; font-weight: 700; background-color: var(--primary-light); color: var(--primary-dark); border-color: var(--border-color);}
+         .budget-summary-card .alert {
+              border-radius: 0 0 var(--border-radius-large) var(--border-radius-large) !important;
+              background-color: var(--secondary-light);
+              color: hsl(var(--secondary-hue), 60%, 30%);
+              font-weight: var(--medium-weight);
+         }
+         .budget-summary-card .alert i { color: var(--secondary-color); }
+
+
+        /* Packing List Accordion - Soft & Clean */
         .accordion-item {
+            border-radius: var(--border-radius-medium) !important; /* Consistent radius */
             margin-bottom: 1rem;
             border: 1px solid var(--border-color);
-            border-radius: var(--border-radius-base) !important;
-            overflow: hidden;
-            box-shadow: none; /* Bỏ shadow mặc định */
-            transition: var(--transition-base);
+            box-shadow: var(--box-shadow-subtle);
         }
-        .accordion-item:hover {
-            box-shadow: var(--box-shadow-light);
-        }
-        .accordion-header {
-             border-radius: var(--border-radius-base); /* Đảm bảo header bo góc */
-        }
+         .accordion-item:hover { box-shadow: var(--box-shadow-medium); }
         .accordion-button {
-            font-weight: 600;
-            padding: 1.2rem 1.5rem; /* Padding lớn hơn */
-            color: var(--dark-color);
-            background-color: var(--white-color);
-            box-shadow: none !important; /* Bỏ shadow khi focus */
-            border-radius: var(--border-radius-base) !important;
+            font-weight: 600; padding: 1.3rem 1.5rem; color: var(--dark-color); background-color: var(--white-color); border-radius: var(--border-radius-medium) !important; font-size: 1.05rem;
         }
         .accordion-button:not(.collapsed) {
-            color: var(--primary-color);
-            background-color: rgba(74, 144, 226, 0.05); /* Nền xanh rất nhạt khi mở */
-            box-shadow: inset 0 -1px 0 var(--border-color) !important;
-            border-bottom-left-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
+            color: var(--primary-color); background-color: var(--primary-light); box-shadow: inset 0 -1px 0 var(--border-color) !important; border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important;
         }
-        .accordion-button::after { /* Tùy chỉnh icon mũi tên */
-             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a90e2'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-             transform: scale(1.2);
-             transition: transform 0.2s ease-in-out;
+        .accordion-button::after { /* Keep the customized arrow */
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a90e2'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: scale(1.3); transition: transform 0.3s ease-out;
         }
-        .accordion-button:not(.collapsed)::after {
-            transform: scale(1.2) rotate(-180deg);
-        }
-        .accordion-button i {
-            margin-right: 12px;
-            width: 22px;
-            text-align: center;
-            color: var(--primary-color); /* Icon màu chính */
-        }
-        .accordion-body {
-            padding: 0 1.5rem 1.5rem 1.5rem; /* Padding cho body */
-        }
-        .accordion-body ul {
-             padding-left: 0; margin-bottom: 0;
-        }
-        .accordion-body li.list-group-item {
-             padding: 0.8rem 0;
-             border: none;
-             border-bottom: 1px solid var(--border-color); /* Ngăn cách nhẹ */
-        }
-        .accordion-body li.list-group-item:last-child {
-             border-bottom: none;
-        }
-         .accordion-body .form-check-label {
-             cursor: pointer;
-             color: var(--grey-color);
-             transition: var(--transition-base);
-         }
-         .accordion-body .form-check-input:checked + .form-check-label {
-              color: var(--dark-color);
-              text-decoration: line-through;
-              opacity: 0.7;
-         }
-         .accordion-body .form-check-input {
-            margin-top: 0.25em;
-            border-color: var(--border-color);
-            transition: var(--transition-base);
-         }
-         .accordion-body .form-check-input:checked {
-             background-color: var(--primary-color);
-             border-color: var(--primary-color);
-         }
-         .accordion-body .form-check-input:focus {
-              box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
-         }
+        .accordion-button:not(.collapsed)::after { transform: scale(1.3) rotate(-180deg); }
+        .accordion-button i { color: var(--primary-color); width: 24px; }
+        .accordion-body { padding: 1.5rem; background-color: var(--white-color); border-top: 1px solid var(--border-color); border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium); }
+        .accordion-body li.list-group-item { padding: 0.7rem 0; border: none; background: transparent; }
+         .accordion-body .form-check-label { font-size: 0.95rem; }
+         .accordion-body .form-check-input { border-radius: 4px; } /* Slightly rounded checkbox */
+         .accordion-body .form-check-input:checked { background-color: var(--primary-color); border-color: var(--primary-color); }
 
-
-        /* Contingency Section Cards */
+        /* Contingency Section Cards - Improved Readability */
         #contingency .card {
-            border-radius: var(--border-radius-base);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--box-shadow-light);
-            height: 100%;
+             border-radius: var(--border-radius-medium);
+             border: 1px solid var(--border-color);
+             box-shadow: var(--box-shadow-subtle);
         }
         #contingency .card-header {
-            font-weight: 600;
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--border-color);
+             padding: 1.2rem 1.5rem; font-weight: 600;
+             border-bottom: 1px solid transparent; /* Remove border below header initially */
         }
-         #contingency .card-header.bg-warning { background-color: #fff9e6 !important; color: #ffa000 !important; border-color: #ffe0b2 !important; } /* Màu header thời tiết */
-         #contingency .card-header.bg-danger { background-color: #ffebee !important; color: #d32f2f !important; border-color: #ffcdd2 !important; } /* Màu header y tế */
-          #contingency .card-header i { margin-right: 8px;}
-
-        #contingency .card-body {
-            padding: 1.5rem;
-        }
-         #contingency .card-body hr {
-             margin: 1.5rem 0; border-top: 1px solid var(--border-color);
-         }
-         #contingency .card-body h6 {
-             font-weight: 600; margin-bottom: 0.7rem; color: var(--dark-color);
-         }
-          #contingency .card-body h6 i { color: var(--grey-color); width: 20px; text-align: center;}
-         #contingency .card-body p, #contingency .card-body li {
-             font-size: 0.95rem; color: var(--grey-color);
-         }
-         #contingency .card-body li strong i {
-            width: 20px; text-align: center; margin-right: 5px;
-         }
-          /* Y tế */
-          #contingency .card-body ul { padding-left: 0; list-style: none;}
-          #contingency .card-body strong.text-danger { font-size: 1.5rem !important; color: #d32f2f !important;}
-          #contingency .card-body a { color: var(--dark-color); text-decoration: underline; }
-          #contingency .card-body a:hover { color: var(--primary-color); }
-          #contingency .card-body i.fa-clinic-medical { color: #4a90e2;}
-          #contingency .card-body i.fa-hospital { color: #27ae60;}
-          #contingency .card-body i.fa-user-md { color: #56ccf2;}
-          #contingency .card-body i.fa-hospital-user { color: #f5a623;}
+        #contingency .card-header.bg-warning { background-color: var(--secondary-light) !important; color: var(--secondary-color) !important; border-color: hsl(var(--secondary-hue), 80%, 85%) !important; border-bottom: 1px solid hsl(var(--secondary-hue), 80%, 85%) !important;}
+        #contingency .card-header.bg-danger { background-color: #ffe3e3 !important; color: #c82333 !important; border-color: #f5c6cb !important; border-bottom: 1px solid #f5c6cb !important; }
+        #contingency .card-body { padding: 1.5rem; }
+        #contingency .card-body hr { margin: 1.8rem 0; border-top: 1px solid var(--border-color); }
+        #contingency .card-body h6 { font-weight: 600; margin-bottom: 0.8rem; }
+        #contingency .card-body p, #contingency .card-body li { font-size: 0.95rem; color: var(--grey-color); line-height: 1.7; }
+        #contingency .card-body li strong i { margin-right: 8px;}
+        #contingency .card-body strong.text-danger { font-size: 1.8rem !important; color: #c82333 !important;}
+        #contingency .card-body a { font-weight: var(--medium-weight); text-decoration: none; border-bottom: 1px dashed var(--primary-color); }
+        #contingency .card-body a:hover { border-bottom-style: solid; color: var(--primary-dark); }
 
 
         /* Footer */
         footer {
-            margin-top: 0; /* Bỏ margin top vì section đã có padding bottom lớn */
-            padding: 2.5rem 0;
+            padding: 3rem 0;
             background-color: var(--dark-color);
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
         }
         footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.9); margin-bottom: 0.5rem; font-size: 1rem;
         }
-        footer small {
-             font-size: 0.85rem;
-        }
+        footer small { font-size: 0.9rem; }
 
-        /* AOS Animation Overrides (optional) */
-         [data-aos="fade-up"] { transition-property: transform, opacity; }
-         [data-aos="fade-right"] { transition-property: transform, opacity; }
-         [data-aos="fade-left"] { transition-property: transform, opacity; }
-         [data-aos="zoom-in-up"] { transition-property: transform, opacity; }
+        /* AOS Animation Adjustment */
+        [data-aos] { transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important; } /* Smoother AOS */
 
     </style>
     <!-- === EMBEDDED CUSTOM CSS END === -->
 
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100"> {/* Tăng offset cho scrollspy */}
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"> <i class="fas fa-feather-alt"></i> Hà Nội Trip</a>
+            <a class="navbar-brand" href="#"> <i class="fas fa-route"></i> Hà Nội Planner</a> {/* Đổi icon và tên */}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -699,27 +524,28 @@
 
     <!-- Hero Section -->
     <header class="hero-section">
-        <div class="container" data-aos="fade-in" data-aos-duration="1500">
-            <h1 class="display-3 fw-bold"> Khám Phá Hà Nội</h1>
-            <p class="lead">Lịch trình chi tiết cho chuyến đi 30/4 - 1/5/2025 của gia đình</p>
+        <div class="container hero-content">
+            <h1>Chuyến Đi Hà Nội 2025</h1>
+            <p>Lịch trình chi tiết cho kỳ nghỉ lễ 30/4 - 1/5 đáng nhớ của cả gia đình.</p>
         </div>
     </header>
 
     <!-- Overview Section -->
     <section id="overview" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-clipboard-list"></i> Tổng Quan Chuyến Đi</h2>
-            <div class="row g-4 justify-content-center">
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-info-circle"></i> Tổng Quan Chuyến Đi</h2>
+            <div class="row g-5 justify-content-center"> {/* Tăng khoảng cách g-5 */}
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card info-card">
                         <div class="icon-circle"><i class="fas fa-calendar-check fa-2x"></i></div>
-                        <div class="card-body text-center pt-0">
+                        <div class="card-body pt-0">
                             <h5 class="card-title">Thời gian & Thành viên</h5>
-                            <p class="card-text"><strong>Thời gian:</strong> 30/4 - 1/5/2025 (2 ngày)</p>
-                            <p class="card-text"><strong>Số người:</strong> 11 người</p>
-                            <ul class="list-unstyled small mt-3">
+                            <p><strong>Thời gian:</strong> 30/4 - 1/5/2025 (2 ngày)<br>
+                               <strong>Số người:</strong> 11 thành viên
+                            </p>
+                            <ul class="small mt-3">
                                 <li><i class="fas fa-users"></i> 3 người lớn 50+ (1 đau lưng)</li>
-                                <li><i class="fas fa-user-friends"></i> 5 người lớn 30-40 (1 bà bầu 4 tháng)</li>
+                                <li><i class="fas fa-user-friends"></i> 5 người lớn 30-40 (1 bà bầu)</li>
                                 <li><i class="fas fa-child"></i> 3 trẻ em (1, 4, 10 tuổi)</li>
                             </ul>
                         </div>
@@ -728,12 +554,12 @@
                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card info-card">
                         <div class="icon-circle"><i class="fas fa-coins fa-2x"></i></div>
-                        <div class="card-body text-center pt-0">
+                        <div class="card-body pt-0">
                             <h5 class="card-title">Ngân Sách Dự Kiến</h5>
-                            <p class="card-text"><strong>Tổng:</strong> 7.000.000đ</p>
-                            <p class="card-text mb-1"><i class="fas fa-wallet me-2" style="color: #56ccf2;"></i>2.000.000đ tiền mặt</p>
-                            <p class="card-text"><i class="far fa-credit-card me-2" style="color: var(--secondary-color);"></i>5.000.000đ thẻ</p>
-                             <div class="progress mt-3" style="height: 8px; border-radius: 4px;">
+                            <p><strong>Tổng cộng:</strong> 7.000.000đ</p>
+                            <p class="mb-1"><i class="fas fa-wallet me-2" style="color: #3dc2ff;"></i>2.000.000đ tiền mặt</p>
+                            <p><i class="far fa-credit-card me-2" style="color: var(--secondary-color);"></i>5.000.000đ thẻ</p>
+                             <div class="progress mt-3" style="height: 6px; border-radius: 3px;">
                                 <div class="progress-bar bg-info" role="progressbar" style="width: 28.5%;" data-bs-toggle="tooltip" title="Tiền mặt: 2.000.000đ"></div>
                                 <div class="progress-bar bg-danger" role="progressbar" style="width: 71.5%;" data-bs-toggle="tooltip" title="Thẻ tín dụng: 5.000.000đ"></div>
                             </div>
@@ -743,13 +569,12 @@
                 </div>
                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card info-card">
-                         <div class="icon-circle"><i class="fas fa-route fa-2x"></i></div>
-                        <div class="card-body text-center pt-0">
+                         <div class="icon-circle"><i class="fas fa-map-signs fa-2x"></i></div>
+                        <div class="card-body pt-0">
                             <h5 class="card-title">Di Chuyển & Lưu Trú</h5>
-                            <p class="card-text mb-1"><strong>Phương tiện:</strong> <i class="fas fa-taxi me-1" style="color: #f39c12;"></i> Taxi (2 xe 7 chỗ)</p>
-                            <p class="card-text"><strong>Nơi ở:</strong> <i class="fas fa-home me-1" style="color: #2ecc71;"></i> 2 nhà riêng</p>
-                            <p class="card-text mt-3"><i class="fas fa-map-marker-alt me-2" style="color: var(--primary-color);"></i>Kiến Hưng, Hà Đông</p>
-                            <small class="text-muted d-block">(307 M4 & 305 M3)</small>
+                            <p class="mb-1"><strong>Phương tiện:</strong> <i class="fas fa-taxi me-1" style="color: #f39c12;"></i> Taxi (2 xe 7 chỗ)</p>
+                            <p><strong>Nơi ở:</strong> <i class="fas fa-home me-1" style="color: #2ecc71;"></i> Nhà riêng tại Kiến Hưng</p>
+                            <small class="text-muted d-block">(Địa chỉ: 307 M4 & 305 M3)</small>
                         </div>
                     </div>
                 </div>
@@ -773,7 +598,7 @@
                      <div class="personnel-card h-100">
                          <i class="fas fa-map-location-dot fa-3x"></i>
                          <h5 class="card-title">Em gái</h5>
-                         <p>Công nghệ, tìm đường, đặt vé online</p>
+                         <p>Công nghệ, tìm đường, đặt vé</p>
                      </div>
                 </div>
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-delay="200">
@@ -794,7 +619,7 @@
                      <div class="personnel-card h-100">
                           <i class="fas fa-briefcase-medical fa-3x"></i>
                          <h5 class="card-title">Bố vợ</h5>
-                         <p>Cần hỗ trợ (đau lưng)</p>
+                         <p>Cần được hỗ trợ (đau lưng)</p>
                      </div>
                  </div>
             </div>
@@ -805,11 +630,11 @@
     <section id="day1" class="section-bg timeline-section">
         <div class="container">
             <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-alt"></i> Lịch Trình Ngày 30/4 (Thứ Tư)</h2>
-            <h4 class="text-center mb-5 fw-bold" style="color: var(--primary-color);" data-aos="fade-up">🐠 Thủy Cung Times City & Vui Chơi 🛍️</h4>
+            <h4 data-aos="fade-up">🐠 Thủy Cung Times City & Vui Chơi 🛍️</h4>
             <div class="timeline">
                 <!-- Morning -->
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon"><i class="fas fa-sun"></i></div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Sáng</h5>
                         <ul>
@@ -825,8 +650,8 @@
                     </div>
                 </div>
                 <!-- Lunch -->
-                <div class="timeline-item alt" data-aos="fade-left">
-                    <div class="timeline-icon"><i class="fas fa-utensils"></i></div>
+                <div class="timeline-item alt" data-aos="fade-up">
+                    <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Trưa</h5>
                         <ul>
@@ -836,8 +661,8 @@
                     </div>
                 </div>
                 <!-- Afternoon -->
-                <div class="timeline-item" data-aos="fade-right">
-                     <div class="timeline-icon"><i class="fas fa-shopping-bag"></i></div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Chiều</h5>
                         <ul>
@@ -847,8 +672,8 @@
                     </div>
                 </div>
                  <!-- Evening -->
-                <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon"><i class="fas fa-moon"></i></div>
+                <div class="timeline-item alt" data-aos="fade-up">
+                     <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Tối</h5>
                         <ul>
@@ -868,11 +693,11 @@
     <section id="day2" class="timeline-section">
         <div class="container">
              <h2 class="text-center section-title" data-aos="fade-up"><i class="far fa-calendar-check"></i> Lịch Trình Ngày 1/5 (Thứ Năm)</h2>
-            <h4 class="text-center mb-5 fw-bold" style="color: #27ae60;" data-aos="fade-up">🏞️ Hồ Hoàn Kiếm & Mua Sắm AEON 🛒</h4>
+            <h4 data-aos="fade-up" style="color: #27ae60;">🏞️ Hồ Hoàn Kiếm & Mua Sắm AEON 🛒</h4>
              <div class="timeline">
                  <!-- Morning -->
-                 <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-icon"><i class="fas fa-sun"></i></div>
+                 <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Sáng</h5>
                         <ul>
@@ -887,8 +712,8 @@
                     </div>
                 </div>
                  <!-- Lunch -->
-                 <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon"><i class="fas fa-utensils"></i></div>
+                 <div class="timeline-item alt" data-aos="fade-up">
+                     <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Trưa</h5>
                         <ul>
@@ -898,8 +723,8 @@
                     </div>
                 </div>
                  <!-- Afternoon -->
-                 <div class="timeline-item" data-aos="fade-right">
-                     <div class="timeline-icon"><i class="fas fa-shopping-cart"></i></div>
+                 <div class="timeline-item" data-aos="fade-up">
+                     <div class="timeline-icon"></div>
                     <div class="timeline-content">
                         <h5>Buổi Chiều</h5>
                         <ul>
@@ -909,8 +734,8 @@
                     </div>
                 </div>
                  <!-- Evening -->
-                 <div class="timeline-item alt" data-aos="fade-left">
-                     <div class="timeline-icon"><i class="fas fa-moon"></i></div>
+                 <div class="timeline-item alt" data-aos="fade-up">
+                     <div class="timeline-icon"></div>
                     <div class="timeline-content">
                          <h5>Buổi Tối</h5>
                         <ul>
@@ -929,12 +754,12 @@
     <!-- Budget Section -->
     <section id="budget" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-calculator"></i> Ngân Sách Chi Tiết</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-file-invoice-dollar"></i> Ngân Sách Chi Tiết</h2>
             <div class="row g-4 g-lg-5">
                 <!-- Taxi -->
                 <div class="col-lg-6" data-aos="fade-up">
                     <div class="card h-100 budget-card">
-                        <div class="card-header"><i class="fas fa-taxi me-2" style="color:#f39c12;"></i>Di Chuyển (Taxi) - Bạn TT</div>
+                        <div class="card-header"><i class="fas fa-taxi me-2" style="color:#f39c12;"></i>Di Chuyển (Taxi)</div>
                         <div class="card-body">
                              <div class="table-responsive">
                                 <table class="table table-hover mb-0">
@@ -955,13 +780,13 @@
                  <!-- Tickets -->
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                      <div class="card h-100 budget-card">
-                        <div class="card-header"><i class="fas fa-ticket-alt me-2" style="color:#2ecc71;"></i>Vé Tham Quan - Bạn TT, Em gái check</div>
+                        <div class="card-header"><i class="fas fa-ticket-alt me-2" style="color:#2ecc71;"></i>Vé Tham Quan</div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-hover mb-0">
                                      <thead><tr><th>Địa điểm</th><th>Chi tiết</th><th>Thành tiền</th><th>TT</th></tr></thead>
                                     <tbody>
-                                        <tr><td>Thủy Cung Times City</td><td>8NL+3TE(10,4,1)</td><td>1.480k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Thủy Cung Times City</td><td>8NL+3TE</td><td>1.480k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                         <tr><td>Khu vui chơi AEON</td><td>3 trẻ</td><td>300k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
                                     </tbody>
                                      <tfoot><tr><td colspan="2" class="text-end">Tổng cộng</td><td>1.780k</td><td></td></tr></tfoot>
@@ -973,7 +798,7 @@
                  <!-- Food -->
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                      <div class="card h-100 budget-card">
-                        <div class="card-header"><i class="fas fa-utensils me-2" style="color:#e74c3c;"></i>Ăn Uống - Mẹ vợ (sáng), Bạn TT (trưa/tối)</div>
+                        <div class="card-header"><i class="fas fa-utensils me-2" style="color:#e74c3c;"></i>Ăn Uống</div>
                         <div class="card-body">
                              <div class="table-responsive">
                                 <table class="table table-hover mb-0">
@@ -995,7 +820,7 @@
                  <!-- Others -->
                  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                      <div class="card h-100 budget-card">
-                         <div class="card-header"><i class="fas fa-receipt me-2" style="color:#9b59b6;"></i>Chi Phí Khác - Bạn TT</div>
+                         <div class="card-header"><i class="fas fa-receipt me-2" style="color:#9b59b6;"></i>Chi Phí Khác</div>
                          <div class="card-body">
                              <div class="table-responsive">
                                 <table class="table table-hover mb-0">
@@ -1049,7 +874,7 @@
     <!-- Packing List Section -->
     <section id="packing">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-tasks"></i> Danh Mục Chuẩn Bị</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-check-double"></i> Danh Mục Chuẩn Bị</h2>
             <div class="accordion" id="packingAccordion">
                  <!-- Technology -->
                 <div class="accordion-item" data-aos="fade-up">
@@ -1194,55 +1019,55 @@
     <!-- Contingency Plan Section -->
     <section id="contingency" class="section-bg">
         <div class="container">
-            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-shield-alt"></i> Phương Án Dự Phòng & Y Tế</h2>
+            <h2 class="text-center section-title" data-aos="fade-up"><i class="fas fa-shield-alt"></i> Kế Hoạch Dự Phòng & Y Tế</h2>
             <div class="row g-4 g-lg-5">
                 <!-- Weather Backup -->
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6" data-aos="fade-up"> {/* Đổi animation */}
                     <div class="card h-100 border-warning">
-                         <div class="card-header bg-warning text-dark"><i class="fas fa-cloud-showers-heavy me-2"></i>Dự Phòng Thời Tiết Xấu (Em gái theo dõi)</div>
+                         <div class="card-header bg-warning text-dark"><i class="fas fa-cloud-showers-heavy me-2"></i>Dự Phòng Thời Tiết Xấu</div>
                          <div class="card-body">
-                             <h6 class="mb-2 fw-bold"><i class="fas fa-cloud-rain me-1"></i>Nếu Trời Mưa Nhỏ</h6>
+                             <h6 class="mb-2 fw-bold"><i class="fas fa-cloud-rain me-2 text-muted"></i>Mưa Nhỏ</h6>
                              <p>Chuẩn bị áo mưa/ô. Ưu tiên điểm trong nhà (Thủy Cung, TTTM).</p>
                              <hr>
-                             <h6 class="mb-2 fw-bold"><i class="fas fa-poo-storm me-1"></i>Nếu Trời Mưa To</h6>
-                             <p class="mb-1"><strong>Ngày 30/4:</strong> Vẫn đi Thủy Cung & TTTM Times City (có thể thêm VinKE/Royal City).</p>
-                             <p><strong>Ngày 1/5:</strong> Sáng thay Hồ Gươm bằng Bảo tàng Dân tộc học. Chiều AEON giữ nguyên.</p>
+                             <h6 class="mb-2 fw-bold"><i class="fas fa-poo-storm me-2 text-primary"></i>Mưa To</h6>
+                             <p class="mb-1"><strong>Ngày 30/4:</strong> Tiếp tục với Thủy Cung & TTTM Times City.</p>
+                             <p><strong>Ngày 1/5:</strong> Đổi Hồ Gươm thành Bảo tàng Dân tộc học. AEON giữ nguyên.</p>
                              <hr>
-                              <h6 class="mb-2 fw-bold"><i class="fas fa-sun me-1"></i>Nếu Nắng Nóng</h6>
-                             <p>Tham quan sớm/muộn. Tìm điểm nghỉ máy lạnh. Chuẩn bị đủ mũ, quạt, nước.</p>
+                              <h6 class="mb-2 fw-bold"><i class="fas fa-sun me-2 text-warning"></i>Nắng Nóng</h6>
+                             <p>Tham quan vào giờ mát. Bổ sung điểm nghỉ điều hòa. Chuẩn bị đủ mũ, quạt, nước.</p>
                          </div>
                     </div>
                 </div>
                 <!-- Medical Info -->
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"> {/* Đổi animation & delay */}
                     <div class="card h-100 border-danger">
-                        <div class="card-header bg-danger text-white"><i class="fas fa-first-aid me-2"></i>Thông Tin Y Tế Khẩn Cấp (Em gái lưu)</div>
+                        <div class="card-header bg-danger text-white"><i class="fas fa-first-aid me-2"></i>Thông Tin Y Tế Khẩn Cấp</div>
                         <div class="card-body">
-                             <h6 class="mb-3 fw-bold"><i class="fas fa-phone-volume text-danger me-1"></i> Liên Hệ Khẩn Cấp</h6>
+                             <h6 class="mb-3 fw-bold"><i class="fas fa-phone-volume me-2"></i> Liên Hệ Khẩn Cấp</h6>
                              <ul class="list-unstyled">
                                 <li class="mb-2 d-flex align-items-center">
-                                    <strong class="text-danger fs-4 me-3">115</strong> <span>Cấp cứu toàn quốc</span>
+                                    <strong class="me-3" style="font-size: 1.6rem; color: #c82333;">115</strong> <span>Cấp cứu toàn quốc</span>
                                 </li>
                                 <li class="d-flex align-items-center">
-                                    <i class="fas fa-ambulance text-danger me-3 fs-5"></i>
-                                    <span><a href="tel:02435736666">024 3573 6666</a> (Cấp cứu tư nhân Vinmec)</span>
+                                    <i class="fas fa-ambulance me-3" style="font-size: 1.4rem; color: #c82333;"></i>
+                                    <span><a href="tel:02435736666">024 3573 6666</a> (Cấp cứu Vinmec)</span>
                                 </li>
                              </ul>
                              <hr>
-                             <h6 class="my-3 fw-bold"><i class="fas fa-map-marked-alt text-danger me-1"></i> Cơ Sở Y Tế Gần Điểm Đến</h6>
+                             <h6 class="my-3 fw-bold"><i class="fas fa-map-marked-alt me-2"></i> Cơ Sở Y Tế Gần Điểm Đến</h6>
                             <ul class="list-unstyled">
                                 <li class="mb-3">
-                                    <strong>Gần Times City:</strong><br>
-                                    <i class="fas fa-clinic-medical me-1"></i> Bệnh viện Vinmec (458 Minh Khai, 📞 <a href="tel:02439743556">024 3974 3556</a>, 24/7)
+                                    <strong class="d-block mb-1">Gần Times City:</strong>
+                                    <i class="fas fa-clinic-medical me-2" style="color:var(--primary-color)"></i> Bệnh viện Vinmec (458 Minh Khai - 📞 <a href="tel:02439743556">024 3974 3556</a>, 24/7)
                                 </li>
                                 <li class="mb-3">
-                                    <strong>Gần Hồ Hoàn Kiếm:</strong><br>
-                                    <i class="fas fa-hospital me-1"></i> BV Việt Đức (40 Tràng Thi, 📞 <a href="tel:02438253531">024 3825 3531</a>)<br>
-                                    <i class="fas fa-user-md me-1"></i> PK SOS (52 Nguyễn Du, 📞 <a href="tel:02438220333">024 3822 0333</a>, 24/7)
+                                    <strong class="d-block mb-1">Gần Hồ Hoàn Kiếm:</strong>
+                                    <i class="fas fa-hospital me-2" style="color:#27ae60"></i> BV Việt Đức (40 Tràng Thi - 📞 <a href="tel:02438253531">024 3825 3531</a>)<br>
+                                    <i class="fas fa-user-md me-2" style="color:#56ccf2"></i> PK SOS (52 Nguyễn Du - 📞 <a href="tel:02438220333">024 3822 0333</a>, 24/7)
                                 </li>
                                 <li>
-                                    <strong>Gần AEON Long Biên:</strong><br>
-                                    <i class="fas fa-hospital-user me-1"></i> BV Đức Giang (Trường Lâm, 📞 <a href="tel:02438275751">024 3827 5751</a>)
+                                    <strong class="d-block mb-1">Gần AEON Long Biên:</strong>
+                                    <i class="fas fa-hospital-user me-2" style="color:var(--secondary-color)"></i> BV Đức Giang (Trường Lâm - 📞 <a href="tel:02438275751">024 3827 5751</a>)
                                 </li>
                              </ul>
                         </div>
@@ -1253,10 +1078,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark text-white-50 text-center">
+    <footer class="py-5 text-center">
         <div class="container">
-            <p>Chúc gia đình có một kỳ nghỉ lễ 30/4 - 1/5 thật vui vẻ và ý nghĩa tại Hà Nội!</p>
-            <small>© 2024 - Lên kế hoạch cùng gia đình</small>
+            <p>Chúc gia đình có một kỳ nghỉ lễ thật vui vẻ và đáng nhớ!</p>
+            <small>Hà Nội, 30/4 - 1/5, 2025</small>
         </div>
     </footer>
 
@@ -1269,10 +1094,11 @@
     <script>
         // Initialize AOS (Animate On Scroll)
         AOS.init({
-            duration: 800, // Animation duration
-            once: false,    // Repeat animation on scroll up/down
-            offset: 100,   // Trigger slightly later
-            easing: 'ease-out-cubic' // Smoother easing
+            duration: 700, // Slightly faster
+            once: false,
+            offset: 80, // Adjust offset
+            easing: 'ease-out-quad', // Different easing
+            disable: 'mobile' // Optional: disable on mobile for performance
         });
 
         // Activate Bootstrap tooltips
@@ -1282,34 +1108,30 @@
         // Activate Bootstrap ScrollSpy
          const scrollSpy = new bootstrap.ScrollSpy(document.body, {
             target: '#navbarNav',
-            offset: 100 // Adjust offset to match padding-top + navbar height effect
+            offset: 120 // Increased offset due to taller navbar and potentially sticky effects
         });
 
         // Close mobile navbar after clicking a link
          const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
          const menuToggle = document.getElementById('navbarNav');
-         if (menuToggle) { // Check if menuToggle exists
+         if (menuToggle) {
              const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
              navLinks.forEach((l) => {
                  l.addEventListener('click', () => {
                     if (menuToggle.classList.contains('show')) {
-                         bsCollapse.hide(); // Use hide() method
+                         bsCollapse.hide();
                      }
                  });
              });
          }
 
-         // Optional: Change navbar style on scroll
-         window.addEventListener('scroll', function() {
-             const navbar = document.querySelector('.navbar');
-             if (window.scrollY > 50) {
-                 // Optional: Add styles for scrolled navbar if needed
-                 // e.g., navbar.classList.add('navbar-scrolled');
-             } else {
-                  // Optional: Remove styles for scrolled navbar if needed
-                 // e.g., navbar.classList.remove('navbar-scrolled');
-             }
-         });
+         // Optional: Add simple fade-in for sections not handled by specific AOS
+         // document.querySelectorAll('section').forEach(section => {
+         //    if (!section.hasAttribute('data-aos')) {
+         //        section.setAttribute('data-aos', 'fade-in');
+         //         section.setAttribute('data-aos-duration', '1000');
+         //    }
+         // });
 
     </script>
     <!-- === EMBEDDED CUSTOM JS END === -->

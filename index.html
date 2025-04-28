@@ -1,49 +1,633 @@
-// Initialize AOS (Animate On Scroll)
-AOS.init({
-    duration: 800, // Animation duration
-    once: true,    // Whether animation should happen only once - while scrolling down
-    offset: 50,   // Offset (in px) from the original trigger point
-});
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế Hoạch Du Lịch Hà Nội 30/4 - 1/5/2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-// Optional: Add smooth scrolling for internal links (if not handled by CSS scroll-behavior)
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//         const targetId = this.getAttribute('href');
-//         const targetElement = document.querySelector(targetId);
-//         if (targetElement) {
-//             // Calculate offset for fixed navbar
-//             const navbarHeight = document.querySelector('.navbar').offsetHeight;
-//             const elementPosition = targetElement.getBoundingClientRect().top;
-//             const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <i class="fas fa-plane-departure"></i> Hà Nội Trip 2025</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#overview">Tổng Quan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#personnel">Phân Công</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#day1">Ngày 30/4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#day2">Ngày 1/5</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#budget">Ngân Sách</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#packing">Chuẩn Bị</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contingency">Dự Phòng</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-//             window.scrollTo({
-//                 top: offsetPosition,
-//                 behavior: "smooth"
-//             });
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container" data-aos="fade-in" data-aos-duration="1500">
+            <h1 class="display-3 fw-bold">🏙️ Kế Hoạch Du Lịch Hà Nội</h1>
+            <p class="lead">Dịp Lễ 30/4 - 1/5/2025 Cùng Gia Đình</p>
+        </div>
+    </header>
 
-//             // Optional: Close mobile navbar after clicking a link
-//             const navbarToggler = document.querySelector('.navbar-toggler');
-//             const navbarCollapse = document.querySelector('.navbar-collapse');
-//             if (navbarToggler && navbarCollapse.classList.contains('show')) {
-//                  bootstrap.Collapse.getInstance(navbarCollapse).hide();
-//                 // Or use: navbarToggler.click();
-//             }
-//         }
-//     });
-// });
+    <!-- Overview Section -->
+    <section id="overview" class="py-5 section-bg">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up"><i class="fas fa-info-circle"></i> Thông Tin Chung</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card info-card h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-circle"><i class="fas fa-calendar-alt fa-2x"></i></div>
+                            <h5 class="card-title mt-3">Thời gian & Nhóm</h5>
+                            <p class="card-text"><strong>Thời gian:</strong> 30/4 - 1/5/2025 (2 ngày)</p>
+                            <p class="card-text"><strong>Số người:</strong> 11</p>
+                            <ul class="list-unstyled text-start small">
+                                <li><i class="fas fa-user-tie text-primary me-2"></i>3 người lớn 50+ (1 đau lưng)</li>
+                                <li><i class="fas fa-user text-success me-2"></i>5 người lớn 30-40 (1 bà bầu 4 tháng)</li>
+                                <li><i class="fas fa-child text-warning me-2"></i>3 trẻ em (1, 4, 10 tuổi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card info-card h-100">
+                        <div class="card-body text-center">
+                             <div class="icon-circle"><i class="fas fa-money-bill-wave fa-2x"></i></div>
+                            <h5 class="card-title mt-3">Ngân sách & Thanh toán</h5>
+                            <p class="card-text"><strong>Tổng ngân sách:</strong> 7.000.000đ</p>
+                             <p class="card-text mb-1"><i class="fas fa-wallet text-info me-2"></i>2.000.000đ tiền mặt</p>
+                             <p class="card-text"><i class="far fa-credit-card text-danger me-2"></i>5.000.000đ thẻ tín dụng</p>
+                             <div class="progress mt-3" style="height: 10px;">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 28.5%;" aria-valuenow="28.5" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 71.5%;" aria-valuenow="71.5" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                             <small class="text-muted">Tiền mặt / Thẻ tín dụng</small>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card info-card h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-circle"><i class="fas fa-car-side fa-2x"></i> <i class="fas fa-home fa-2x ms-2"></i></div>
+                            <h5 class="card-title mt-3">Phương tiện & Lưu trú</h5>
+                            <p class="card-text"><strong>Di chuyển:</strong> Taxi (2 xe 7 chỗ)</p>
+                            <p class="card-text"><strong>Lưu trú:</strong> 2 nhà riêng</p>
+                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-2"></i>Kiến Hưng, Hà Đông (307 M4 & 305 M3)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Optional: Change navbar background on scroll
-// window.addEventListener('scroll', function() {
-//     const navbar = document.querySelector('.navbar');
-//     if (window.scrollY > 50) {
-//         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Darker background
-//     } else {
-//         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Original background
-//     }
-// });
+    <!-- Personnel Section -->
+    <section id="personnel" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up"><i class="fas fa-users"></i> Phân Công Nhân Sự</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+                    <div class="card personnel-card text-center h-100">
+                        <div class="card-body">
+                            <i class="fas fa-user-tie fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Bạn</h5>
+                            <p class="card-text">Quản lý tài chính, đặt taxi</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card personnel-card text-center h-100">
+                         <div class="card-body">
+                             <i class="fas fa-laptop-code fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">Em gái</h5>
+                            <p class="card-text">Công nghệ, tìm đường, đặt vé online</p>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card personnel-card text-center h-100">
+                        <div class="card-body">
+                             <i class="fas fa-female fa-3x mb-3 text-danger"></i> <i class="fas fa-baby-carriage text-danger"></i>
+                            <h5 class="card-title">Vợ (Bà bầu)</h5>
+                            <p class="card-text">Chuẩn bị đồ dùng, đồ ăn nhẹ</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                     <div class="card personnel-card text-center h-100">
+                         <div class="card-body">
+                            <i class="fas fa-utensils fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">Mẹ vợ</h5>
+                            <p class="card-text">Nấu ăn, chuẩn bị đồ ăn dặm</p>
+                         </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                     <div class="card personnel-card text-center h-100">
+                         <div class="card-body">
+                             <i class="fas fa-male fa-3x mb-3 text-warning"></i> <i class="fas fa-briefcase-medical text-warning"></i>
+                            <h5 class="card-title">Bố vợ</h5>
+                            <p class="card-text">Cần hỗ trợ (đau lưng)</p>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Itinerary Day 1 -->
+    <section id="day1" class="py-5 section-bg timeline-section">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title" data-aos="fade-up"><i class="far fa-calendar-check"></i> Lịch Trình Ngày 30/4/2025 (Thứ Tư)</h2>
+            <h4 class="text-center mb-4 text-primary fw-bold" data-aos="fade-up">🐠 THỦY CUNG & TIMES CITY 🛍️</h4>
+            <div class="timeline">
+                <!-- Morning -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon bg-warning"><i class="fas fa-sun"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Sáng</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>7:00-7:30:</strong> 👩‍🍳 Mẹ vợ - Chuẩn bị bữa sáng, đồ ăn dặm.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>7:30-8:00:</strong> Cả nhà ăn sáng.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>8:00-8:45:</strong> 🤰 Vợ - Chuẩn bị đồ dùng (Kiểm tra đồ ăn dặm, thuốc cho bố).</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>8:45-9:00:</strong> 👨 Bạn - Đặt 2 taxi 7 chỗ (Mai Linh: 024.38.222.666).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>9:00-9:15:</strong> 👧 Em gái - Kiểm tra lộ trình, giờ mở cửa Thủy Cung.</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>9:15-10:00:</strong> <i class="fas fa-taxi text-warning me-1"></i> Di chuyển đến Times City (Bạn TT: 400k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>10:00-10:15:</strong> <i class="fas fa-ticket-alt text-success me-1"></i> Bạn + Em gái - Mua vé Thủy Cung (Em gái check ưu đãi, Bạn TT: 1.480k thẻ).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>10:15-12:30:</strong> <i class="fas fa-fish text-info me-1"></i> Tham quan Thủy Cung (Mẹ chăm cháu, Em gái chụp ảnh, Vợ+Bạn hỗ trợ bố, 11:00 cho bé ăn dặm, 11:30 xem show).</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Lunch -->
+                <div class="timeline-item alt" data-aos="fade-left">
+                    <div class="timeline-icon bg-success"><i class="fas fa-utensils"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Trưa</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>12:30-13:00:</strong> 👨 Bạn + 👧 Em gái - Tìm và đặt nhà hàng (Em gái check app, Bạn gọi).</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>13:00-14:00:</strong> <i class="fas fa-concierge-bell text-danger me-1"></i> Ăn trưa tại Hoàng Yến Cuisine (T5) (Bạn TT: 950k thẻ).</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Afternoon -->
+                <div class="timeline-item" data-aos="fade-right">
+                     <div class="timeline-icon bg-info"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Chiều</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>14:00-16:00:</strong> <i class="fas fa-store text-primary me-1"></i> Khám phá TTTM (Bạn+Vợ hỗ trợ bố ở Highland, Em gái dẫn trẻ đi chơi, Bạn TT cafe: 330k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>16:00-17:30:</strong> <i class="fas fa-fountain text-info me-1"></i> Công viên Times City (16:30 Mẹ cho bé ăn dặm, Em gái quay nhạc nước).</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Evening -->
+                <div class="timeline-item alt" data-aos="fade-left">
+                     <div class="timeline-icon bg-dark"><i class="fas fa-moon"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Tối</h5>
+                        <ul class="list-unstyled">
+                           <li><i class="far fa-clock text-muted me-2"></i><strong>17:30-18:00:</strong> 👧 Em gái - Kiểm tra, đặt bàn ăn tối.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>18:00-19:00:</strong> <i class="fas fa-pepper-hot text-danger me-1"></i> Ăn tối tại Bumbu Desa (TTTM) (Bạn TT: 880k thẻ).</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>19:00:</strong> 👨 Bạn - Đặt 2 taxi về (440k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>19:15-20:00:</strong> <i class="fas fa-home text-primary me-1"></i> Di chuyển về Kiến Hưng.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>20:00-21:00:</strong> 👧 Em gái - Chia sẻ ảnh (Google Photos).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Activate Bootstrap tooltips (if you add any)
-// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+     <!-- Itinerary Day 2 -->
+    <section id="day2" class="py-5 timeline-section">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title" data-aos="fade-up"><i class="far fa-calendar-check"></i> Lịch Trình Ngày 1/5/2025 (Thứ Năm)</h2>
+            <h4 class="text-center mb-4 text-success fw-bold" data-aos="fade-up">🏞️ HỒ HOÀN KIẾM & AEON MALL 🛒</h4>
+             <div class="timeline">
+                 <!-- Morning -->
+                 <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon bg-warning"><i class="fas fa-sun"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Sáng</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>7:00-7:30:</strong> 👩‍🍳 Mẹ vợ - Chuẩn bị bữa sáng, đồ ăn dặm.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>7:30-8:00:</strong> Cả nhà ăn sáng.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>8:00-9:00:</strong> 🤰 Vợ - Chuẩn bị đồ dùng (Đồ ăn dặm 2 bữa, dù/áo mưa, đai lưng cho bố).</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>9:00-9:30:</strong> 👧 Em gái - Kiểm tra thời tiết, lộ trình, giao thông.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>9:30:</strong> 👨 Bạn - Đặt 2 taxi đi Hồ Gươm (400k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>9:45-10:30:</strong> <i class="fas fa-taxi text-warning me-1"></i> Di chuyển đến Hồ Hoàn Kiếm.</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>10:30-12:00:</strong> <i class="fas fa-landmark text-success me-1"></i> Khám phá Hồ Hoàn Kiếm (Em gái chụp ảnh Tháp Rùa, Bạn+Vợ hỗ trợ bố, 11:30 Mẹ cho bé ăn dặm tại quán cafe, Bạn TT cafe: 330k tiền mặt).</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Lunch -->
+                 <div class="timeline-item alt" data-aos="fade-left">
+                     <div class="timeline-icon bg-success"><i class="fas fa-utensils"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Trưa</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>11:45:</strong> 👨 Bạn - Gọi đặt bàn Quán Ăn Ngon.</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>12:00-13:30:</strong> <i class="fas fa-concierge-bell text-danger me-1"></i> Ăn trưa tại Quán Ăn Ngon (18 Phan Bội Châu) (Bạn TT: 760k thẻ).</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Afternoon -->
+                 <div class="timeline-item" data-aos="fade-right">
+                     <div class="timeline-icon bg-info"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="fw-bold">Buổi Chiều</h5>
+                        <ul class="list-unstyled">
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>13:30:</strong> 👨 Bạn - Đặt 2 taxi đến AEON Mall Long Biên (300k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>14:00-17:00:</strong> <i class="fas fa-store-alt text-primary me-1"></i> AEON Mall (Bạn+Mẹ hỗ trợ bố ở food court, Vợ+người lớn mua sắm, Em gái đưa trẻ đến Tini World - Bạn TT: 300k thẻ, Bạn TT cafe: 330k tiền mặt, Bạn TT mua sắm: 400k thẻ, 15:30 Mẹ cho bé ăn dặm).</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Evening -->
+                 <div class="timeline-item alt" data-aos="fade-left">
+                     <div class="timeline-icon bg-dark"><i class="fas fa-moon"></i></div>
+                    <div class="timeline-content">
+                         <h5 class="fw-bold">Buổi Tối</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>17:00:</strong> 👧 Em gái - Kiểm tra, đặt bàn Shabu-ya.</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>17:00-18:30:</strong> <i class="fas fa-hotdog text-warning me-1"></i> Ăn tối tại Shabu-ya (AEON Mall) (Bạn TT: 880k thẻ).</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>18:30:</strong> 👨 Bạn - Đặt 2 taxi về (440k tiền mặt).</li>
+                             <li><i class="far fa-clock text-muted me-2"></i><strong>18:45-19:30:</strong> <i class="fas fa-home text-primary me-1"></i> Di chuyển về Kiến Hưng.</li>
+                            <li><i class="far fa-clock text-muted me-2"></i><strong>19:30-20:30:</strong> 👧 Em gái - Tổng hợp ảnh, video.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section id="budget" class="py-5 section-bg">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up"><i class="fas fa-file-invoice-dollar"></i> Ngân Sách Chi Tiết</h2>
+            <div class="row g-4">
+                <!-- Taxi -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card h-100 budget-card">
+                        <div class="card-header bg-primary text-white"><i class="fas fa-taxi me-2"></i>Di Chuyển (Taxi) - Bạn TT</div>
+                        <div class="card-body p-0">
+                             <div class="table-responsive">
+                                <table class="table table-striped table-hover mb-0">
+                                    <thead>
+                                        <tr><th>Lộ trình</th><th>Số xe</th><th>Đơn giá</th><th>Thành tiền</th><th>TT</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Kiến Hưng → Times</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Times → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Kiến Hưng → Hồ Gươm</td><td>2</td><td>200k</td><td>400k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Hồ Gươm → AEON</td><td>2</td><td>150k</td><td>300k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>AEON → Kiến Hưng</td><td>2</td><td>220k</td><td>440k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="table-light fw-bold">
+                                            <td colspan="3">Tổng cộng</td>
+                                            <td>1.980k</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Tickets -->
+                <div class="col-lg-6" data-aos="fade-left">
+                     <div class="card h-100 budget-card">
+                        <div class="card-header bg-success text-white"><i class="fas fa-ticket-alt me-2"></i>Vé Tham Quan - Bạn TT, Em gái check</div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover mb-0">
+                                    <thead>
+                                        <tr><th>Địa điểm</th><th>Chi tiết</th><th>Thành tiền</th><th>TT</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Thủy Cung Times City</td><td>8NL+3TE(10,4,1)</td><td>1.480k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Khu vui chơi AEON</td><td>3 trẻ</td><td>300k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                    </tbody>
+                                     <tfoot>
+                                        <tr class="table-light fw-bold">
+                                            <td colspan="2">Tổng cộng</td>
+                                            <td>1.780k</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Food -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                     <div class="card h-100 budget-card">
+                        <div class="card-header bg-warning text-dark"><i class="fas fa-utensils me-2"></i>Ăn Uống - Mẹ vợ (sáng), Bạn TT (trưa/tối)</div>
+                        <div class="card-body p-0">
+                             <div class="table-responsive">
+                                <table class="table table-striped table-hover mb-0">
+                                    <thead>
+                                        <tr><th>Bữa ăn</th><th>Địa điểm</th><th>Thành tiền</th><th>TT</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Sáng 30/4</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Trưa 30/4</td><td>Hoàng Yến</td><td>950k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Tối 30/4</td><td>Bumbu Desa</td><td>880k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Sáng 1/5</td><td>Tại nhà</td><td>220k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Trưa 1/5</td><td>Quán Ăn Ngon</td><td>760k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Tối 1/5</td><td>Shabu-ya</td><td>880k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="table-light fw-bold">
+                                            <td colspan="2">Tổng cộng</td>
+                                            <td>3.910k</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Others -->
+                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                     <div class="card h-100 budget-card">
+                         <div class="card-header bg-info text-dark"><i class="fas fa-shopping-basket me-2"></i>Chi Phí Khác - Bạn TT</div>
+                         <div class="card-body p-0">
+                             <div class="table-responsive">
+                                <table class="table table-striped table-hover mb-0">
+                                    <thead>
+                                        <tr><th>Mục</th><th>Thành tiền</th><th>TT</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Đồ uống (30/4)</td><td>330k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Đồ uống (1/5)</td><td>330k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                        <tr><td>Mua sắm/Quà</td><td>400k</td><td><span class="badge bg-danger">Thẻ</span></td></tr>
+                                        <tr><td>Dự phòng</td><td>150k</td><td><span class="badge bg-info">Tiền mặt</span></td></tr>
+                                    </tbody>
+                                     <tfoot>
+                                        <tr class="table-light fw-bold">
+                                            <td>Tổng cộng</td>
+                                            <td>1.210k</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+                <!-- Summary -->
+                 <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                     <div class="card budget-summary-card border-primary">
+                        <div class="card-header bg-primary text-white fw-bold"><i class="fas fa-calculator me-2"></i>Tổng Kết Ngân Sách - Bạn quản lý</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center">
+                                    <thead>
+                                        <tr class="table-light"><th>Hạng mục</th><th>Tổng chi phí</th><th><i class="fas fa-wallet"></i> Tiền mặt</th><th><i class="far fa-credit-card"></i> Thẻ tín dụng</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Di chuyển</td><td>1.980k</td><td>1.980k</td><td>0đ</td></tr>
+                                        <tr><td>Vé tham quan</td><td>1.780k</td><td>0đ</td><td>1.780k</td></tr>
+                                        <tr><td>Ăn uống</td><td>3.910k</td><td>440k</td><td>3.470k</td></tr>
+                                        <tr><td>Chi phí khác</td><td>1.210k</td><td>810k</td><td>400k</td></tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="table-primary fw-bold">
+                                            <td>TỔNG CỘNG</td>
+                                            <td>6.880.000 đ</td>
+                                            <td>3.230.000 đ</td>
+                                            <td>5.650.000 đ</td>
+                                         </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                             <div class="alert alert-warning mt-3" role="alert">
+                                <i class="fas fa-exclamation-triangle me-2"></i> <strong>Lưu ý:</strong> Tổng chi tiền mặt (~3.23M) > Ngân sách tiền mặt (2M). Cần điều chỉnh thanh toán một số khoản bằng thẻ tín dụng.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packing List Section -->
+    <section id="packing" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up"><i class="fas fa-suitcase-rolling"></i> Danh Mục Cần Chuẩn Bị</h2>
+            <div class="accordion" id="packingAccordion">
+                <!-- Technology -->
+                <div class="accordion-item" data-aos="fade-up">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       <i class="fas fa-laptop-code me-2 text-info"></i> Công Nghệ & Tài Liệu (Em gái)
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#packingAccordion">
+                    <div class="accordion-body">
+                       <ul class="list-group list-group-flush">
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Bản in kế hoạch (2 bản)</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Danh sách SĐT quan trọng</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Bản đồ HN offline</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Sạc dự phòng & cáp</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Máy ảnh/Điện thoại</li>
+                       </ul>
+                    </div>
+                    </div>
+                </div>
+                 <!-- Personal Items -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       <i class="fas fa-user-tag me-2 text-primary"></i> Đồ Dùng Cá Nhân (Vợ)
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#packingAccordion">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Bình nước cá nhân</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Kem chống nắng SPF 50+</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Mũ/nón, kính râm</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Quạt mini</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Khẩu trang dự phòng</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Khăn ướt, khăn giấy</li>
+                           <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Đồ ăn nhẹ, bánh kẹo</li>
+                       </ul>
+                    </div>
+                    </div>
+                </div>
+                <!-- Elderly & Dad -->
+                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                     <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                       <i class="fas fa-user-tie me-2 text-warning"></i> <i class="fas fa-briefcase-medical me-2 text-warning"></i> Cho Người Lớn Tuổi & Bố Vợ (Bạn hỗ trợ)
+                    </button>
+                    </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#packingAccordion">
+                         <div class="accordion-body">
+                             <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Đai lưng hỗ trợ</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Thuốc giảm đau</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Ghế gấp mini (nếu có)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Gậy chống (nếu cần)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Giày đi bộ êm ái</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+                <!-- Pregnant Wife -->
+                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                     <h2 class="accordion-header" id="headingFour">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <i class="fas fa-female me-2 text-danger"></i> <i class="fas fa-baby-carriage me-2 text-danger"></i> Cho Bà Bầu (Vợ tự chuẩn bị)
+                     </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#packingAccordion">
+                         <div class="accordion-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Giày đi bộ thoải mái</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Tất nén (nếu cần)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Đồ ăn nhẹ riêng</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Áo khoác nhẹ</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Thuốc cá nhân</li>
+                           </ul>
+                         </div>
+                    </div>
+                </div>
+                <!-- Children -->
+                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                     <h2 class="accordion-header" id="headingFive">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                       <i class="fas fa-child me-2 text-success"></i> Cho Trẻ Em (Mẹ vợ)
+                     </button>
+                     </h2>
+                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#packingAccordion">
+                         <div class="accordion-body">
+                             <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Đồ ăn dặm bé 1t (4 bữa)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Bình, thìa, khăn ăn cho bé</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Tã, khăn ướt, túi đựng tã bẩn</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Đồ chơi nhỏ gọn</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Quần áo thay (1-2 bộ)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Mũ rộng vành che nắng</li>
+                            </ul>
+                         </div>
+                     </div>
+                </div>
+                <!-- Medical -->
+                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                       <i class="fas fa-pills me-2 text-danger"></i> Thuốc Và Y Tế (Vợ)
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#packingAccordion">
+                         <div class="accordion-body">
+                             <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Túi sơ cứu cơ bản</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Thuốc hạ sốt, đau bụng</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Thuốc chống say xe</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Băng cá nhân, cồn sát trùng</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Thuốc chống côn trùng</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Men tiêu hóa</li>
+                           </ul>
+                         </div>
+                     </div>
+                </div>
+                 <!-- Weather Prep -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
+                    <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                       <i class="fas fa-cloud-sun-rain me-2 text-secondary"></i> Dự Phòng Thời Tiết (Em gái check, Vợ chuẩn bị)
+                    </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#packingAccordion">
+                         <div class="accordion-body">
+                             <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Áo mưa/dù (2-3 chiếc)</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Áo khoác nhẹ</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Kem chống nắng dự phòng</li>
+                                <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value=""> Mũ rộng vành</li>
+                           </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contingency Plan Section -->
+    <section id="contingency" class="py-5 section-bg">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title" data-aos="fade-up"><i class="fas fa-exclamation-triangle"></i> Phương Án Dự Phòng</h2>
+            <div class="row g-4">
+                <!-- Weather Backup -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card h-100 border-warning">
+                         <div class="card-header bg-warning text-dark"><i class="fas fa-cloud-showers-heavy me-2"></i>Dự Phòng Thời Tiết Xấu (Em gái theo dõi)</div>
+                         <div class="card-body">
+                             <h6 class="card-subtitle mb-2 text-muted">Nếu Trời Mưa Nhỏ</h6>
+                             <p>Chuẩn bị áo mưa/ô. Tập trung điểm trong nhà. Tăng thời gian Thủy Cung, TTTM.</p>
+                             <hr>
+                             <h6 class="card-subtitle mb-2 text-muted">Nếu Trời Mưa To</h6>
+                             <p><strong>Ngày 30/4:</strong> Vẫn đi Thủy Cung & TTTM Times City (thêm VinKE/Royal City nếu cần).</p>
+                             <p><strong>Ngày 1/5:</strong> Sáng thay Hồ Gươm bằng Bảo tàng Dân tộc học. Chiều AEON giữ nguyên.</p>
+                             <hr>
+                              <h6 class="card-subtitle mb-2 text-muted">Nếu Nắng Nóng</h6>
+                             <p>Tham quan sớm/muộn. Thêm điểm dừng máy lạnh. Chuẩn bị mũ, quạt, nước.</p>
+                         </div>
+                    </div>
+                </div>
+                <!-- Medical Info -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card h-100 border-danger">
+                        <div class="card-header bg-danger text-white"><i class="fas fa-hospital-alt me-2"></i>Cơ Sở Y Tế Gần Điểm Tham Quan (Em gái lưu)</div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong><i class="fas fa-map-marker-alt text-primary me-1"></i>Gần Times City:</strong> Bệnh viện Vinmec (458 Minh Khai, 📞 024 3974 3556, 24/7)</li>
+                                <li class="mb-2"><strong><i class="fas fa-map-marker-alt text-success me-1"></i>Gần Hồ Hoàn Kiếm:</strong> BV Việt Đức (40 Tràng Thi, 📞 024 3825 3531) / PK SOS (52 Nguyễn Du, 📞 024 3822 0333, 24/7)</li>
+                                <li class="mb-2"><strong><i class="fas fa-map-marker-alt text-info me-1"></i>Gần AEON Long Biên:</strong> BV Đức Giang (Trường Lâm, 📞 024 3827 5751)</li>
+                                <hr>
+                                <li class="fw-bold"><i class="fas fa-ambulance text-danger me-1"></i>Cấp cứu: 115</li>
+                                <li><i class="fas fa-phone-alt text-danger me-1"></i>Cấp cứu tư nhân Vinmec: 024 3573 6666</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">Chúc gia đình có một chuyến đi vui vẻ và đáng nhớ tại Hà Nội!</p>
+            <small>© 2024 - Kế hoạch được tạo tự động</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
